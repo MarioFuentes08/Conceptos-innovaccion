@@ -26,3 +26,18 @@
 
 ### **10.-Interfaz:** Se utiliza en informática para nombrar a la conexión funcional entre dos sistemas, programas, dispositivos o componentes de cualquier tipo, que proporciona una comunicación de distintos niveles, permitiendo el intercambio de información. Es una conexión por cable, red inalámbrica, de programación o software para conectar dos o más cosas
 ![Interfaz](https://rockcontent.com/es/wp-content/uploads/sites/3/2019/02/Desenho-de-email-para-todos-os-dispositivos.png)
+
+### **11.-Cluster:** Se aplica a los conjuntos de servidores unidos entre sí normalmente por una red de alta velocidad y que se comportan como si fuesen un único servidor. Es un conjunto de servidores que se unen para ser más poderosos.
+![Cluster](https://help.qlik.com/es-ES/qlikview/November2018/Subsystems/Server/Content/Resources/Images/Clustering_servers_1.png)
+
+### **12.-Microsoft Service Pass:** Es una promoción que lanza Microsoft por un periodo limitado de tiempo para que las personas puedan probar Azure de manera gratuita.
+![Microsft Service Pass](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAALVBMVEXyUCJ/ugAApO//uQD////yTh/zVy2EvRYWp/D/uxbyTBvzXziJvyQkq/D/viRJQpTmAAABDUlEQVR4nO3PyRHCQBAEwRHo5vDfXD1ZC5oYyHKgIqtSLev8aZtixYCEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhIQdhUuq81vCNdZjED63WDX/eoT9I+wfYf8I+0fYv9pjvYbt+4hVt1j7IDzusQgJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQn/WXgB6/1wCkBWrdwAAAAASUVORK5CYII=)
+
+### **13.-Balanceador de cargas:** Es un dispositivo de hardware o software que se pone al frente de un conjunto de servidores que atienden una aplicación y, tal como su nombre lo indica, asigna o balancea las solicitudes que llegan de los clientes a los servidores usando algún algoritmo. equilibra y distribuye el trabajo entre los servidores.
+![Balanceador](https://redesteleco.com/wp-content/uploads/2019/04/load_balancer.jpg)
+
+### **14.-Arquitectura (informática):** Es el diseño conceptual y la estructura operacional fundamental de un sistema de computadoras. Es decir, es un modelo y una descripción funcional de los requerimientos y las implementaciones de diseño para varias partes de una computadora, con especial interés en la forma en que la unidad central de proceso (CPU) trabaja internamente y accede a las direcciones de memoria. Es como está o va a estar construido el servidor, la computadora o la aplicación.
+![Arquitectura](https://i.pinimg.com/originals/67/bd/24/67bd24037f2e30853f5bc1427eb84b86.jpg)
+
+### **15.-Bot:** Es un programa informático que efectúa automáticamente tareas repetitivas a través de Internet, cuya realización por parte de una persona sería imposible o muy tediosa. Es un programa que hace cosas por ti. 
+![Bot](https://http2.mlstatic.com/D_NQ_NP_943480-MLA32708746948_102019-W.jpg)
