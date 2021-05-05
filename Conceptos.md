@@ -31,7 +31,7 @@
 ![Cluster](https://help.qlik.com/es-ES/qlikview/November2018/Subsystems/Server/Content/Resources/Images/Clustering_servers_1.png)
 
 ### **12.-Microsoft Service Pass:** Es una promoción que lanza Microsoft por un periodo limitado de tiempo para que las personas puedan probar Azure de manera gratuita.
-![Microsft Service Pass](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAALVBMVEXyUCJ/ugAApO//uQD////yTh/zVy2EvRYWp/D/uxbyTBvzXziJvyQkq/D/viRJQpTmAAABDUlEQVR4nO3PyRHCQBAEwRHo5vDfXD1ZC5oYyHKgIqtSLev8aZtixYCEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhIQdhUuq81vCNdZjED63WDX/eoT9I+wfYf8I+0fYv9pjvYbt+4hVt1j7IDzusQgJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQn/WXgB6/1wCkBWrdwAAAAASUVORK5CYII=)
+![Microsft Service Pass](https://i2.wp.com/unaaldia.hispasec.com/wp-content/uploads/2019/06/microsoft.jpg?fit=718%2C479&ssl=1&w=640)
 
 ### **13.-Balanceador de cargas:** Es un dispositivo de hardware o software que se pone al frente de un conjunto de servidores que atienden una aplicación y, tal como su nombre lo indica, asigna o balancea las solicitudes que llegan de los clientes a los servidores usando algún algoritmo. equilibra y distribuye el trabajo entre los servidores.
 ![Balanceador](https://redesteleco.com/wp-content/uploads/2019/04/load_balancer.jpg)
