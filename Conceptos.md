@@ -42,7 +42,8 @@
 ### **15.-Bot:** Es un programa informático que efectúa automáticamente tareas repetitivas a través de Internet, cuya realización por parte de una persona sería imposible o muy tediosa. Es un programa que hace cosas por ti. 
 ![Bot](https://http2.mlstatic.com/D_NQ_NP_943480-MLA32708746948_102019-W.jpg)
 
-# **16.-¿Qué es la informática en la nube?** 
+# **16.- Introducción a fundamentos de Azure**
+## *¿Qué es la informática en la nube?*
 ### Es la entrega de servicios informáticos a través de Internet, lo que se conoce como la nube. Estos servicios incluyen servidores, almacenamiento, bases de datos, redes, software, análisis e inteligencia. La informática en la nube ofrece una innovación más rápida, recursos flexibles y economías de escala.
 ![nube](https://blog.educacionit.com/wp-content/uploads/2020/02/488074.jpg)
 ## *¿Por qué suele ser más barato usar la informática en la nube?*
