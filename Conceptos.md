@@ -438,9 +438,81 @@
 ### En la imagen siguiente se muestran algunos de los conceptos de informática en la nube que se presentan en esta unidad. En este ejemplo, se muestran varios factores cuando se está pensando en implementar un servidor de base de datos en un entorno de nube híbrida: a medida que los recursos se mueven del entorno local al entorno de nube, se reducen los costos y los requisitos de administración.
 ![nube hibrida](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/fundamental-azure-concepts/media/cloud-computing-continuum.png)
 
+# 18.-Descripción de los componentes principales de la arquitectura de Azure
 
+## *Introducción a las suscripciones, los grupos de administración y los recursos de Azure*
 
+###  La estructura organizativa de los recursos en Azure, consta de cuatro niveles: grupos de administración, suscripciones, grupos de recursos y recursos.
 
+![grupos](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/azure-architecture-fundamentals/media/hierarchy.png)
+
+* Recursos: Los recursos son instancias de servicios que puede crear, como máquinas virtuales, almacenamiento o bases de datos SQL.
+
+* Grupos de recursos: Los recursos se combinan en grupos de recursos, que actúan como contenedor lógico en el que se implementan y administran recursos de Azure como aplicaciones web, bases de datos y cuentas de almacenamiento.
+
+* Suscripciones: Una suscripción agrupa las cuentas de usuario y los recursos que han creado esas cuentas de usuario. Las organizaciones pueden usar las suscripciones para administrar los costos y los recursos creados por los usuarios, equipos o proyectos.
+
+* Grupos de administración: Estos grupos le ayudan a administrar el acceso, las directivas y el cumplimiento de varias suscripciones.
+
+## *Suscripciones y grupos de administración de Azure*
+
+### *Suscripciones de Azure*
+
+###  Una suscripción le proporciona acceso autenticado y autorizado a los servicios y productos de Azure. Es una unidad lógica de servicios de Azure que está vinculada a una cuenta de Azure, que es una identidad en Azure Active Directory (Azure AD) o en un directorio en el que confía Azure AD.
+
+![suscripcion](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/azure-architecture-fundamentals/media/subscriptions.png)
+
+### Hay dos tipos de límites de suscripción que puede utilizar:
+
+* Límite de facturación: Este tipo de suscripción determina cómo se factura una cuenta de Azure por el uso de Azure.
+
+* Azure aplica las directivas de administración de acceso en el nivel de suscripción, por lo que puede crear suscripciones independientes para reflejar distintas estructuras organizativas. Por ejemplo, dentro de una empresa hay diferentes departamentos a los que se pueden aplicar directivas de suscripción de Azure distintas.
+
+## *Creación de una suscripción de Azure adicional*
+
+### Puede optar por crear suscripciones adicionales para separar lo siguiente:
+
+* Entornos: cuando administra sus recursos, puede optar por crear suscripciones con el fin de configurar entornos independientes para el desarrollo y las pruebas, para seguridad o para aislar los datos por motivos de cumplimiento.
+
+* Estructuras organizativas: puede crear suscripciones para reflejar las distintas estructuras organizativas. Por ejemplo, podría limitar un equipo a recursos de bajo costo, al tiempo que permite que el departamento de TI tenga un alcance completo. 
+
+* Facturación: es posible que también quiera crear suscripciones adicionales para fines de facturación. Dado que los costos se agregan primero en el nivel de suscripción, es posible que quiera crear suscripciones para administrar y realizar un seguimiento de los costos en función de sus necesidades.
+
+* Límites de suscripción: las suscripciones se enlazan a algunas limitaciones de hardware. Por ejemplo, el número máximo de circuitos de Azure ExpressRoute por cada suscripción es de 10. Esos límites se deben tener en consideración al crear suscripciones en la cuenta. Si en escenarios concretos hay que superar esos límites, es posible que se necesiten suscripciones adicionales.
+
+## *Personalización de la facturación para satisfacer sus necesidades*
+
+### En función de sus necesidades, se pueden configurar varias facturas dentro de la misma cuenta de facturación. Para ello, cree perfiles de facturación adicionales. Cada perfil de facturación contiene su propia factura mensual y método de pago.
+
+![facturacion](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/azure-architecture-fundamentals/media/billing-structure-overview.png)
+
+## *Grupos de administración de Azure*
+
+### Las suscripciones se organizan en contenedores llamados grupos de administración y las condiciones de gobernanza se aplican a los grupos de administración. Todas las suscripciones dentro de un grupo de administración heredan automáticamente las condiciones que se aplican al grupo de administración. Los grupos de administración proporcionan capacidad de administración de nivel empresarial a gran escala con independencia del tipo de suscripciones que tenga.
+
+## *Jerarquía de los grupos de administración y las suscripciones*
+
+### El diagrama siguiente muestra un ejemplo de creación de una jerarquía para la gobernanza mediante grupos de administración.
+
+![jerarquia](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/azure-architecture-fundamentals/media/management-groups-and-subscriptions.png)
+
+### Puede crear una jerarquía que aplique una directiva. Por ejemplo, puede limitar las ubicaciones de las máquinas virtuales a la región oeste de EE. UU. en un grupo denominado Producción.
+
+### El propietario de los recursos o las suscripciones no puede modificar esta directiva de seguridad, lo que permite una gobernanza mejorada.
+
+### Otro escenario en el que se usarían grupos de administración es para proporcionar acceso de usuario a varias suscripciones. Al mover muchas suscripciones bajo ese grupo de administración, puede crear una asignación de control de acceso basado en rol (RBAC) en el grupo de administración que heredará ese acceso en todas las suscripciones. 
+
+## *Hechos importantes acerca de los grupos de administración*
+
+* Se admiten 10 000 grupos de administración en un único directorio.
+
+* Un árbol de grupo de administración puede admitir hasta seis niveles de profundidad. Este límite no incluye el nivel raíz ni el nivel de suscripción.
+
+* Cada grupo de administración y suscripción solo puede admitir un elemento primario.
+
+* Cada grupo de administración puede tener muchos elementos secundarios.
+
+* Todas las suscripciones y grupos de administración están dentro de una única jerarquía en cada directorio.
 
 
 
