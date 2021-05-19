@@ -694,14 +694,224 @@ No todas las regiones son compatibles con las zonas de disponibilidad. Para obte
 ### 5.-Abra una pestaña nueva en el explorador, pegue esta dirección URL y presione Entrar para ir al nuevo sitio de WordPress. Ya puede configurar el sitio de WordPress y agregarle contenido.
 ![wordpress_listo](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/azure-architecture-fundamentals/media/configure-wordpress.png)
 
+# **19.-Exploración de los servicios de análisis y bases de datos de Azure**
 
+## *Exploración de Azure Cosmos DB*
 
+### Azure Cosmos DB es un servicio de base de datos de varios modelos distribuido globalmente. Puede escalar de forma elástica e independiente el rendimiento y el almacenamiento en cualquier número de regiones de Azure de todo el mundo. 
 
+### Azure Cosmos DB es compatible con los datos sin esquema, lo que le permite compilar aplicaciones "Always On" con una gran capacidad de respuesta para admitir datos en continuo cambio.
 
+### En la siguiente ilustración se muestra una base de datos de ejemplo de Azure Cosmos DB que se usa para almacenar datos para el sitio web del portal de aprendizaje
 
+![cosmos_DB](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/azure-database-fundamentals/media/azure-cosmos-db.png)
 
+### Azure Cosmos DB es flexible. En el nivel más bajo, Azure Cosmos DB almacena los datos en formato de secuencia de registro de átomos (ARS). Después, los datos se abstraen y se proyectan como una API, que se especifica al crear la base de datos. Entre las opciones se incluyen SQL, MongoDB, Cassandra, Tables y Gremlin. Este nivel de flexibilidad implica que, al migrar las bases de datos de la empresa a Azure Cosmos DB, los desarrolladores pueden seguir con la API con la que se encuentren más cómodos.
 
+## *Exploración de Azure SQL Database*
 
+### Azure SQL Database es una base de datos relacional basada en la última versión estable del motor de base de datos de Microsoft SQL Server. Es un motor de base de datos de plataforma como servicio (PaaS). Controla la mayoría de las funciones de administración de bases de datos, como las actualizaciones, las aplicaciones de revisiones, las copias de seguridad y la supervisión, sin intervención del usuario. SQL Database proporciona disponibilidad del 99,99 %. Las capacidades de PaaS que están integradas en SQL Database permiten centrarse en las actividades de administración y optimización de bases de datos específicas del dominio que son críticas para el negocio. 
+
+### Microsoft controla todas las actualizaciones del código del sistema operativo y SQL. No hace falta administrar la infraestructura subyacente.
+### SQL Database puede ser la opción adecuada para una variedad de aplicaciones modernas en la nube, porque le permite procesar tanto datos relacionales como estructuras no relacionales, por ejemplo, grafos, JSON, elementos espaciales y XML.
+
+### De hecho, las funcionalidades más recientes de SQL Server se publican primero en SQL Database y, después, en el propio SQL Server. Las funcionalidades de SQL Server más recientes se obtienen sin costo alguno mediante actualizaciones o mejoras, y se han probado en millones de bases de datos.
+
+## *Migración*
+
+### En la ilustración siguiente se muestran los tipos de datos que su empresa puede almacenar en el sitio web del portal de aprendizaje de Azure SQL Database.
+![Azure_SQL](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/azure-database-fundamentals/media/azure-sql.png)
+
+### Puede migrar las bases de datos existentes de SQL Server con un tiempo de inactividad mínimo mediante Azure Database Migration Service. Microsoft Data Migration Assistant puede generar informes de evaluación que proporcionan recomendaciones para ayudarlo a través de los cambios necesarios anteriores a la ejecución de una migración.
+
+## *Tarea 1: Creación de la base de datos*
+
+![sql](https://i.ibb.co/rtSH6xD/Captura.png)
+
+![sql1](https://i.ibb.co/hdg0XXR/cap1.png)
+
+![sql1.1](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/azure-database-fundamentals/media/server-pane-expanded.png#lightbox)
+
+### 4.-Seleccione Aceptar cuando haya terminado.
+
+### 5.- Seleccione Siguiente: Redes y configure las siguientes opciones (deje los valores predeterminados del resto de campos).
+![sql2](https://i.ibb.co/tPwtYqD/cap2.png)
+
+### 6.-Seleccione Siguiente: Seguridad y, junto a Habilitar Azure Defender para SQL, elija Ahora no.
+
+### 7.- Seleccione Siguiente: Configuración adicional y configure las siguientes opciones.
+
+![sql3](https://i.ibb.co/tmk7jR7/cap3.png)
+
+### 8.- Seleccione Revisar + crear.
+
+### 9.- Cuando la validación sea correcta, en la ventana Crear base de datos SQL, seleccione Crear para implementar el servidor y la base de datos. La creación del servidor y la implementación de la base de datos de ejemplo pueden tardar aproximadamente entre dos y cinco minutos.
+
+### 10.-Haga clic en Go to resource (Ir al recurso).
+
+### 11.-Seleccione Establecer el firewall del servidor y luego seleccione Sí en la opción Allow Azure services and resources to access this server (Permitir que los servicios y recursos de Azure accedan a este servidor).
+
+### 12.-Seleccione Guardar.
+
+### 13.-Seleccione Aceptar.
+
+## *Tarea 2: Probar base de datos*
+
+### 1.-En el panel Todos los recursos, busque y seleccione Bases de datos SQL y asegúrese de que se ha creado la nueva base de datos. Es posible que tenga que actualizar la página.
+
+![bd1](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/azure-database-fundamentals/media/sql-database.png)
+
+### 2.-Seleccione la entrada db1 que representa la base de datos SQL que ha creado y, después, seleccione Editor de consultas (versión preliminar) en la barra de navegación.
+![bd2](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/azure-database-fundamentals/media/query-editor-preview.png)
+
+### 3.-Inicie sesión como sqluser con la contraseña 
+
+### 4.-No podrá iniciar sesión.
+
+### Lea atentamente el error y tome nota de la dirección IP que debe permitirse a través del firewall.
+
+![inicio_sesion](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/azure-database-fundamentals/media/query-editor-login.png)
+
+### 5.-Seleccione Información general > Establecer el firewall del servidor.
+
+### 6.-En la sección Dirección IP del cliente, se mostrará la dirección IP; compruebe que se trata de la misma dirección IP del cliente del error anterior. Haga clic en + Agregar IP del cliente, que agregará un Nombre de regla y colocará la dirección IP en los campos IP inicial e IP final y, a continuación, seleccione Guardar.
+
+![ip](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/azure-database-fundamentals/media/sql-server-firewall-settings.png)
+
+### 7.-Vuelva a la base de datos SQL y a la página de inicio de sesión del Editor de consultas. Intente volver a iniciar sesión como sqluser con la contraseña Pa$$w0rd1234. Esta vez debería poder hacerlo. La nueva regla de firewall podría tardar un par de minutos en implementarse. Si espera y sigue apareciendo un error, compruebe la dirección IP del cliente en el error e intente seleccionar Configuración del firewall > y agregue de nuevo la dirección IP correcta del cliente.
+
+### 8.-Después de iniciar sesión correctamente, aparece el panel de consulta. Escriba la consulta siguiente en el panel del editor.
+# -----------------------------------
+### SELECT TOP 20 pc.Name as CategoryName, p.name as ProductName
+### FROM SalesLT.ProductCategory pc
+### JOIN SalesLT.Product p
+### ON pc.productcategoryid = p.productcategoryid;
+
+# -----------------------------------
+![ejec](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/azure-database-fundamentals/media/query-editor.png)
+
+### 9.-Seleccione Ejecutar y examine los resultados de la consulta en el panel Resultados. La consulta debería ejecutarse correctamente.
+
+![examinar](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/azure-database-fundamentals/media/database-query-editor-pane.png)
+
+## *Exploración de Azure SQL Managed Instance*
+
+### Azure SQL Managed Instance es un servicio de datos en la nube escalable que proporciona la mayor compatibilidad con el motor de base de datos de SQL Server con todas las ventajas de una plataforma como servicio totalmente administrada. En función de su escenario, Azure SQL Managed Instance podría ofrecer más opciones para sus necesidades de base de datos.
+
+### Al igual que Azure SQL Database, Azure SQL Managed Instance es un motor de base de datos de plataforma como servicio (PaaS), lo que significa que su empresa podrá aprovechar las mejores características de mover los datos a la nube en un entorno totalmente administrado. Su empresa ya no necesitará comprar y administrar hardware caro, se beneficiará de las características de aprovisionamiento rápido y escalado de servicio de Azure, junto con la aplicación automatizada de revisiones y las actualizaciones de versiones. Además, podrá estar seguro de que los datos siempre estarán allí cuando los necesite a través de características de alta disponibilidad integradas y un acuerdo de nivel de servicio (SLA) del 99,99 % de tiempo de actividad.
+
+### Azure SQL Database y Azure SQL Managed Instance ofrecen muchas características iguales, pero Azure SQL Managed Instance proporciona varias opciones que puede que no estén disponibles en Azure SQL Database. 
+### Para obtener una lista detallada de las diferencias entre Azure SQL Database y Azure SQL Managed Instance, vea
+
+### https://docs.microsoft.com/es-es/azure/azure-sql/database/features-comparison
+
+### Azure SQL Managed Instance facilita la migración de los datos locales en SQL Server a la nube con Azure Database Migration Service (DMS) o copias de seguridad y restauración nativas. Una vez que haya descubierto todas las características que usa la empresa, deberá evaluar qué instancias locales de SQL Server puede migrar a Azure SQL Managed Instance para ver si tiene algún problema de bloqueo.
+
+![migracion](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/azure-database-fundamentals/media/migration-process-flow-small.png)
+
+### Para obtener una descripción detallada del proceso de migración, vea
+
+### https://docs.microsoft.com/es-es/azure/azure-sql/migration-guides/managed-instance/sql-server-to-managed-instance-guide
+
+## *Exploración de Azure Database for MySQL*
+
+### Azure Database for MySQL es un servicio de bases de datos relacionales en la nube, y se basa en el motor de base de datos de MySQL Community Edition, versiones 5.6, 5.7 y 8.0. Con él, tiene un contrato de nivel de servicio de disponibilidad del 99,99 % de Azure.
+
+### Con cada servidor de Azure Database for MySQL, se saca provecho de las ventajas de la seguridad integrada, la tolerancia a errores y la protección de datos, algo que de lo contrario tendría que adquirir o diseñar, compilar y administrar. Con Azure Database for MySQL puede usar la restauración a un momento dado para recuperar un servidor a un estado anterior, con un plazo máximo de 35 días.
+
+### Ofrece lo siguiente:
+
+* Alta disponibilidad integrada sin coste adicional.
+
+* Rendimiento predecible y precios de pago por uso inclusivos.
+
+* Escalado según sea necesario, en cuestión de segundos.
+
+* Capacidad de protección de información confidencial en reposo y en movimiento.
+
+* Copias de seguridad automáticas.
+
+* Seguridad y cumplimiento de nivel empresarial.
+
+### Estas funcionalidades no requieren casi ninguna tarea de administración y todas se proporcionan sin ningún costo adicional. 
+
+### Además, puede migrar las bases de datos existentes de MySQL con un tiempo de inactividad mínimo mediante Azure Database Migration Service. Después de completar la migración, puede seguir desarrollando la aplicación con las herramientas de código abierto y en la plataforma que prefiera. No tiene que adquirir nuevos conocimientos.
+
+![mysql](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/azure-database-fundamentals/media/azure-db-for-mysql-conceptual-diagram-expanded.png#lightbox)
+
+### Azure Database for MySQL ofrece varios niveles de servicio, y cada uno de ellos aporta un rendimiento y una funcionalidad diferentes para admitir cargas de trabajo de bases de datos ligeras y pesadas. Puede compilar su primera aplicación en una base de datos pequeña por poco dinero al mes y, después, ajustar la escala para satisfacer las necesidades de la solución.
+
+## *Exploración de Azure Database for PostgreSQL*
+
+### Azure Database for PostgreSQL es un servicio de base de datos relacional en la nube. El software de servidor se basa en la versión de la comunidad del motor de base de datos de PostgreSQL de código abierto.
+
+###  Ofrece las siguientes ventajas:
+
+* Alta disponibilidad integrada en comparación con los recursos locales. No hay ninguna configuración, replicación o costo adicionales que sean necesarios para asegurarse de que las aplicaciones están siempre disponibles.
+
+* Precios sencillos y flexibles. Tiene un rendimiento predecible en función de un plan de tarifa seleccionado que incluye copias de seguridad automáticas, aplicación de revisiones de software, supervisión y seguridad.
+
+* Escalado o reducción vertical según sea necesario, en cuestión de segundos. Puede escalar procesos o almacenamiento por separado según sea necesario para asegurarse de que adapta su servicio para que coincida con el uso.
+
+* Copias de seguridad automáticas ajustables y restauración a un momento dado durante un máximo de 35 días.
+
+* Seguridad y cumplimiento de nivel empresarial para proteger la información confidencial en reposo y en movimiento. Esta seguridad abarca el cifrado de datos en el disco y el cifrado SSL entre la comunicación entre cliente y servidor.
+
+### Azure Database for PostgreSQL está disponible en dos opciones de implementación:
+
+### **Servidor único**
+
+### La opción de implementación Un solo servidor ofrece:
+
+* Alta disponibilidad integrada sin coste adicional (contrato de nivel de servicio del 99,99 %).
+
+* Rendimiento predecible y precios de pago por uso inclusivos.
+
+* Escalado vertical según sea necesario, en cuestión de segundos.
+
+* Supervisión y alertas para evaluar el servidor.
+
+* Seguridad y cumplimiento de nivel empresarial.
+
+* Capacidad de protección de información confidencial en reposo y en movimiento.
+
+* Copias de seguridad automáticas y restauración a un momento dado durante un máximo de 35 días.
+
+### Todas estas funcionalidades apenas requieren tareas de administración y todas se proporcionan sin costo adicional. Se puede centrar en el desarrollo rápido de aplicaciones y en reducir el plazo de comercialización, en lugar de tener que administrar las máquinas virtuales y la infraestructura.
+
+### Ofrece tres planes de tarifa: Básico, De uso general y Optimizado para memoria. Cada plan ofrece capacidades de recursos diferente para admitir sus cargas de trabajo de la base de datos. Puede compilar su primera aplicación en una base de datos pequeña por poco dinero al mes y, después, ajustar la escala para satisfacer las necesidades de la solución. 
+
+### **Hiperescala (Citus)**
+
+###  escala horizontalmente las consultas entre varias máquinas mediante el particionamiento. Su motor de consultas paraleliza las consultas SQL entrantes en estos servidores para agilizar las respuestas en conjuntos de datos grandes. Proporciona servicios a las aplicaciones que requieren mayor escala y mejor rendimiento, por lo general las cargas de trabajo que se aproximan a los 100 GB de datos (o que ya los superan).
+
+### La opción de implementación de Hiperescala (Citus) admite aplicaciones multiinquilino, análisis operativos en tiempo real y cargas de trabajo transaccionales de alto rendimiento. 
+
+## *Exploración de análisis y macrodatos*
+
+### La forma y el formato de los datos son muy variados. Cuando hablamos sobre macrodatos, nos referimos a grandes volúmenes de datos.
+
+### Con tal cantidad de datos, es cada vez más difícil comprenderlos y tomar decisiones basándose en ellos. Estos volúmenes son tan grandes que las formas de procesamiento y análisis tradicionales ya no son adecuadas.
+
+### A lo largo del tiempo, se han desarrollado tecnologías de clúster de código abierto para tratar con estos grandes conjuntos de datos. Microsoft Azure admite una amplia gama de tecnologías y servicios para proporcionar soluciones de macrodatos y análisis, como Azure Synapse Analytics, Azure HDInsight, Azure Databricks y Azure Data Lake Analytics.
+
+## *Azure Synapse Analytics*
+
+### Azure Synapse Analytics (anteriormente Azure SQL Data Warehouse) es un servicio de análisis ilimitado que reúne el almacenamiento de datos empresariales y el análisis de macrodatos. Puede consultar los datos como prefiera mediante recursos sin servidor o aprovisionados a escala. 
+
+## *HDInsight de Azure*
+
+### Azure HDInsight es un servicio de análisis de código abierto totalmente administrado para empresas. Es un servicio en la nube que hace que sea más fácil, rápido y rentable procesar grandes cantidades de datos. Puede ejecutar marcos de código abierto populares y crear tipos de clúster, como Apache Spark, Apache Hadoop, Apache Kafka, Apache HBase, Apache Storm y Machine Learning Services. HDInsight también admite una amplia gama de escenarios, como la extracción, la transformación y la carga de datos (ETL), el almacenamiento de datos, el aprendizaje automático e IoT.
+
+## *Azure Databricks*
+
+### Azure Databricks le ayuda a descubrir información de todos los datos y a crear soluciones de inteligencia artificial. Puede configurar el entorno de Apache Spark en minutos y, después, escalar automáticamente y colaborar en proyectos compartidos en un área de trabajo interactiva. Azure Databricks admite Python, Scala, R, Java y SQL, así como marcos y bibliotecas de ciencia de datos, como TensorFlow, PyTorch y Scikit-learn.
+
+## *Análisis con Azure Data Lake*
+
+### Azure Data Lake Analytics es un servicio de trabajos de análisis a petición que simplifica los macrodatos. En lugar de implementar, configurar y ajustar el hardware, escribirá consultas para transformar los datos y extraer ideas valiosas
+
+### Solo paga por su trabajo cuando se está ejecutando, lo que hace que sea más rentable.
 
 
 
