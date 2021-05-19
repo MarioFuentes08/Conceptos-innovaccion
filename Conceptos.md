@@ -899,19 +899,39 @@ No todas las regiones son compatibles con las zonas de disponibilidad. Para obte
 
 ### Azure Synapse Analytics (anteriormente Azure SQL Data Warehouse) es un servicio de análisis ilimitado que reúne el almacenamiento de datos empresariales y el análisis de macrodatos. Puede consultar los datos como prefiera mediante recursos sin servidor o aprovisionados a escala. 
 
+![synapse](https://docs.microsoft.com/en-gb/learn/azure-fundamentals/azure-database-fundamentals/media/icon-service-azure-synapse-analytics-ccf35fef.png)
+
 ## *HDInsight de Azure*
 
 ### Azure HDInsight es un servicio de análisis de código abierto totalmente administrado para empresas. Es un servicio en la nube que hace que sea más fácil, rápido y rentable procesar grandes cantidades de datos. Puede ejecutar marcos de código abierto populares y crear tipos de clúster, como Apache Spark, Apache Hadoop, Apache Kafka, Apache HBase, Apache Storm y Machine Learning Services. HDInsight también admite una amplia gama de escenarios, como la extracción, la transformación y la carga de datos (ETL), el almacenamiento de datos, el aprendizaje automático e IoT.
+![HDINSIGHT](https://docs.microsoft.com/en-gb/learn/azure-fundamentals/azure-database-fundamentals/media/icon-service-hd-insight-22e60b81.png)
 
 ## *Azure Databricks*
 
 ### Azure Databricks le ayuda a descubrir información de todos los datos y a crear soluciones de inteligencia artificial. Puede configurar el entorno de Apache Spark en minutos y, después, escalar automáticamente y colaborar en proyectos compartidos en un área de trabajo interactiva. Azure Databricks admite Python, Scala, R, Java y SQL, así como marcos y bibliotecas de ciencia de datos, como TensorFlow, PyTorch y Scikit-learn.
+![databricks](https://docs.microsoft.com/en-gb/learn/azure-fundamentals/azure-database-fundamentals/media/icon-service-azure-databricks-d9d1140b.png)
 
 ## *Análisis con Azure Data Lake*
 
 ### Azure Data Lake Analytics es un servicio de trabajos de análisis a petición que simplifica los macrodatos. En lugar de implementar, configurar y ajustar el hardware, escribirá consultas para transformar los datos y extraer ideas valiosas
+![data_lake](https://docs.microsoft.com/en-gb/learn/azure-fundamentals/azure-database-fundamentals/media/icon-service-data-lake-analytics-e0c86f7c.png)
 
 ### Solo paga por su trabajo cuando se está ejecutando, lo que hace que sea más rentable.
+
+### *1. El equipo de desarrollo está interesado en escribir aplicaciones basadas en Graph que se aprovechen de las ventajas de la API de Gremlin. ¿Qué opción sería la más adecuada para ese escenario?*
+
+### -Azure Cosmos DB
+
+### *2. Una empresa usa la pila LAMP para varios de sus sitios web. ¿Qué opción sería la más adecuada para la migración?* 
+### -Azure Database for MySQL
+
+### 3. Tailwind Traders tiene millones de entradas de registro que quiere analizar. ¿Qué opción sería la más adecuada para el análisis?*
+
+### -Azure Synapse Analytics
+
+
+
+
 
 
 
