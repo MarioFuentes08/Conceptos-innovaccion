@@ -514,21 +514,185 @@
 
 * Todas las suscripciones y grupos de administración están dentro de una única jerarquía en cada directorio.
 
+## *Agrupación lógica*
+
+### Al colocar recursos de uso, tipo o ubicación similar en un grupo de recursos, puede proporcionar orden y organización a los recursos que cree en Azure. La agrupación lógica es el aspecto que más le interesa, ya que, entre los recursos, el desorden es elevado.
+
+![logica](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/azure-architecture-fundamentals/media/resource-group.png)
+
+## *Ciclo de vida*
+
+### Si elimina un grupo de recursos, también se eliminarán todos los recursos que contenga. La organización de los recursos por ciclo de vida puede ser útil en entornos que no sean de producción, en los que puede probar un experimento y después descartarlo. 
+
+## *Autorización*
+
+### Al aplicar permisos RBAC a un grupo de recursos, puede facilitar la administración y limitar el acceso para permitir solo lo que sea necesario.
+
+* RBAC : Control de acceso basado en roles
+
+## *Azure Resource Manager*
+
+### Proporciona una capa de administración que le permite crear, actualizar y eliminar recursos de la cuenta de Azure. Puede usar características de administración como el control de acceso, los bloqueos y las etiquetas para proteger y organizar los recursos después de la implementación.
+
+### Cuando un usuario envía una solicitud de cualquiera de las herramientas, las API o los SDK de Azure, Resource Manager recibe la solicitud. 
+
+### Dado que todas las solicitudes se controlan mediante la misma API, verá resultados y funcionalidades coherentes en todas las distintas herramientas.
+
+![adm_recursos](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/azure-architecture-fundamentals/media/consistent-management-layer.png)
 
 
+## *Ventajas de usar Administrador de recursos*
+
+* Administrar la infraestructura mediante plantillas declarativas en lugar de scripts. Una plantilla de Resource Manager es un archivo JSON que define lo que quiere implementar en Azure.
+
+* Implementar, administrar y supervisar todos los recursos de la solución en grupo, en lugar de controlarlos individualmente.
+
+* Vuelva a implementar la solución a lo largo del ciclo de vida de desarrollo y tenga la seguridad de que los recursos se implementan en un estado coherente.
+
+* Definir las dependencias entre recursos de modo que se implementen en el orden correcto.
+
+* Aplique control de acceso a todos los servicios, puesto que RBAC se integra de forma nativa en la plataforma de administración.
+
+* Aplicar etiquetas a los recursos para organizar de manera lógica todos los recursos de la suscripción.
+
+* Comprenda la facturación de la organización viendo los costos de un grupo de recursos que comparten la misma etiqueta.
+
+## *Zonas de disponibilidad, pares de regiones y regiones de Azure*
+
+### Los recursos se crean en regiones, que son diferentes ubicaciones geográficas de todo el mundo.
+
+### Al usar un servicio o crear un recurso como una máquina virtual (VM) o una base de datos SQL, usa equipamiento físico en una o varias de estas ubicaciones. 
+
+## *Regiones de Azure*
+
+### Una región es un área geográfica del planeta que contiene al menos un centro de datos, aunque podrían ser varios centros de datos cercanos y conectados mediante una red de baja latencia.
+
+### Al implementar un recurso en Azure, es habitual tener que elegir la región en la que quiere que se implemente el recurso.
+
+### **Algunos servicios o características de las máquinas virtuales solo están disponibles en determinadas regiones, como, por ejemplo, tipos de almacenamiento o tamaños de VM específicos. También hay algunos servicios globales de Azure que no requieren que seleccione una región concreta, como Azure Active Directory, Azure Traffic Manager o Azure DNS.**
+
+![regiones](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/azure-architecture-fundamentals/media/regions-small.png)
+
+## *¿Por qué son importantes las regiones?*
+
+### Estas regiones le dan la flexibilidad necesaria para acercar las aplicaciones a los usuarios estén donde estén. Las regiones globales proporcionan una mejor escalabilidad y redundancia, y conservan la residencia de datos para los servicios.
+
+## *Regiones de Azure especiales*
+
+### Azure tiene regiones especializadas que se pueden usar al crear las aplicaciones.
+
+* US DoD (centro), US Gov Virginia, US Gov Iowa y más: Estas regiones son instancias físicas y lógicas con aislamiento de red de Azure para asociados y agencias de la administración pública de EE. UU. 
+
+* Este de China, Norte de China y más: Estas regiones están disponibles gracias a una asociación exclusiva entre Microsoft y 21Vianet, por la cual Microsoft no mantiene directamente los centros de datos.
+
+### Hay otros dos términos que también debe conocer: zonas geográficas y zonas de disponibilidad.
+
+## *Zonas de disponibilidad de Azure*
+
+### A fin de proteger la información en caso de error, deberá asegurarse de que los servicios y datos son redundantes. Si hospeda su infraestructura, configurar su propia redundancia requiere la creación de entornos de hardware duplicados. Azure puede ayudar a que la aplicación tenga alta disponibilidad a través de zonas de disponibilidad.
+
+## *¿Qué es una zona de disponibilidad?*
+
+### Son centros de datos separados físicamente dentro de una región de Azure. Cada zona de disponibilidad consta de uno o varios centros de datos equipados con alimentación, refrigeración y redes independientes. Una zona de disponibilidad se configura para constituir un *límite de aislamiento*. 
+
+![zona_disponibilidad](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/azure-architecture-fundamentals/media/availability-zones.png)
+
+## *Regiones admitidas*
+
+No todas las regiones son compatibles con las zonas de disponibilidad. Para obtener una lista actualizada, es necesario consultar: https://docs.microsoft.com/es-es/azure/availability-zones/az-region
+
+## *Uso de las zonas de disponibilidad en sus aplicaciones*
+
+### Si quiere usar zonas de disponibilidad para ejecutar aplicaciones críticas y conseguir una alta disponibilidad en la arquitectura de sus aplicaciones, coloque sus recursos de proceso, almacenamiento, red y datos dentro de una zona y replíquelos en otras. Esto puede suponer un costo
+
+### Los servicios de Azure que admiten zonas de disponibilidad se dividen en dos categorías:
+
+* Servicios de zona: ancle el recurso a una zona específica (por ejemplo, máquinas virtuales, discos administrados, direcciones IP).
+* Servicios de redundancia de zona: la plataforma se replica automáticamente entre zonas (por ejemplo, almacenamiento con redundancia de zona, SQL Database).
+
+## *Pares de regiones de Azure*
+
+### Es posible que un desastre grande pueda provocar una interrupción tan grave como para afectar incluso a dos centros de datos. Por eso Azure también crea pares de regiones.
+
+## *¿Qué es un par de regiones?*
+
+### Cada región de Azure se empareja siempre con otra región de la misma zona geográfica (por ejemplo, EE. UU., Europa o Asia) que se encuentre como mínimo a 500 km de distancia. 
+
+### Este enfoque permite la replicación de recursos. Si una región de un par se ve afectada por un desastre natural, por ejemplo, los servicios conmutarán por error automáticamente a la otra región de su par de regiones.
+
+![par_regiones](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/azure-architecture-fundamentals/media/region-pairs.png)
+
+### Puesto que las dos regiones están directamente conectadas y lo suficientemente lejos como para estar aisladas contra desastres regionales, puede usarlas para proporcionar redundancia de datos y servicios de confianza.
+
+### Ventajas adicionales de los pares de región:
+
+* Si se produce una gran interrupción de Azure, se da prioridad a una región de cada par para asegurarse de que al menos una se restaure lo más rápido posible para las aplicaciones hospedadas en ese par de regiones.
+
+* Las actualizaciones planeadas de Azure se implementan una a una en regiones emparejadas para minimizar el tiempo de inactividad y el riesgo de interrupción de la aplicación.
+
+* Los datos siguen residiendo en la misma zona geográfica que su pareja (excepto Sur de Brasil) con fines de jurisdicción fiscal y de aplicación de la ley.
 
 
+## *Creación de un sitio web hospedado en Azure*
 
+## *¿Qué es App Service?*
 
+### App Service es un servicio basado en HTTP que permite crear y hospedar muchos tipos de soluciones basadas en la Web sin necesidad de administrar la infraestructura. 
 
+## *¿Qué es Azure Marketplace?*
 
+### Azure Marketplace es una tienda en línea que hospeda aplicaciones certificadas y optimizadas para ejecutarse en Azure. Existen muchos tipos de aplicaciones disponibles, que van desde la inteligencia artificial y Machine Learning a las aplicaciones web. 
 
+## *Creación de recursos en Azure*
 
+### Lo primero que se suele hacer es crear un grupo de recursos que contendrá todo lo que necesitamos crear.
 
+### Podemos usar Azure Portal para crear y administrar los grupos de recursos de la solución, pero también puede administrar recursos a través de una línea de comandos con la CLI de Azure. La CLI de Azure es una opción útil si hay que automatizar el proceso en el futuro.
 
+## *Selección de una ubicación*
 
+### El espacio aislado gratuito permite crear recursos en un subconjunto de las regiones globales de Azure. Seleccione una región de la lista al crear los recursos
 
+## *Creación de un sitio web de WordPress*
 
+### 1.-Si todavía no lo ha hecho, compruebe que ha activado el espacio aislado. Al activar el espacio aislado, se asignarán la suscripción y el grupo de recursos que usará en este ejercicio.
+
+### 2.- Inicie sesión en Azure Portal con la misma cuenta que ha usado para activar el espacio aislado.
+
+### 3.-En la parte superior izquierda del panel de Azure Portal, seleccione Crear un recurso.
+
+![azure_portal](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/azure-architecture-fundamentals/media/create-resource.png)
+
+### Esta opción le llevará a Azure Marketplace.
+![azure_market](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/azure-architecture-fundamentals/media/azure-marketplace.png)
+
+### 4.-Sabemos que queremos instalar WordPress, así que podemos realizar una búsqueda rápida para encontrarlo. En el cuadro Buscar en el marketplace con las opciones de aplicaciones que aparecen, escriba WordPress. 
+
+### 5.-Seleccione Crear para iniciar el proceso de creación de una aplicación de WordPress. Aparece el panel WordPress/Crear.
+
+### 6.-Aparecerán varias opciones para configurar la implementación. Escriba los valores siguientes para cada opción.
+![azure_wordpress1](https://i.ibb.co/2KcsYtq/Captura.png
+)
+
+### *Comprobación de que el sitio web se está ejecutando*
+
+### 1.- Seleccione el icono de la campana de notificación situado en la parte superior del portal. Si el ancho de la ventana del explorador es menor, se puede mostrar al hacer clic en el icono de puntos suspensivos (...) de la esquina superior derecha.
+
+![azure_wordpress2](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/azure-architecture-fundamentals/media/notification-bell.png
+)
+
+### 2.- Seleccione Implementación en curso para ver los detalles de todos los recursos que se han creado.
+### 3.-Cuando el mensaje de estado de la implementación cambie a Se completó la implementación, verá que el estado del cuadro de diálogo Notificaciones cambiará a Implementación correcta. Seleccione Ir al recurso para ir a la información general de App Service.
+
+(https://docs.microsoft.com/es-mx/learn/azure-fundamentals/azure-architecture-fundamentals/media/deployment-complete.png
+)
+
+### 4.-Busque la dirección URL en la sección Información general.
+
+![azure_wordpress3](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/azure-architecture-fundamentals/media/website-url.png)
+
+### 5.-Abra una pestaña nueva en el explorador, pegue esta dirección URL y presione Entrar para ir al nuevo sitio de WordPress. Ya puede configurar el sitio de WordPress y agregarle contenido.
+![wordpress_listo](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/azure-architecture-fundamentals/media/configure-wordpress.png)
 
 
 
