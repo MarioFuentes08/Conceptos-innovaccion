@@ -1318,4 +1318,9 @@ No todas las regiones son compatibles con las zonas de disponibilidad. Para obte
 * El almacenamiento de archivo almacena datos sin conexión y ofrece los menores costos de almacenamiento, pero los mayores costos de acceso y rehidratación de datos.
 ![elegiracceso](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/azure-storage-fundamentals/media/account-tier-42ec76d7.png)
 
+### 1. ¿Cuál es el primer paso que se debe llevar a cabo para compartir un archivo de imagen como blob en Azure Storage?
+### Crear una cuenta de Azure Storage
 
+### 2. ¿Qué opción de Azure Storage es mejor para almacenar datos para copias de seguridad y restauración, recuperación ante desastres y archivado?
+
+### Azure Blob Storage
