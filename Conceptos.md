@@ -1648,6 +1648,22 @@ Supongamos que elige un espacio de direcciones de 10.0.0.0/24 para la primera re
 
 ### Con ExpressRoute los datos no viajan a través de la red pública de Internet y, por tanto, no se exponen a los posibles riesgos asociados a las comunicaciones de Internet. ExpressRoute es una conexión privada de la infraestructura local a la infraestructura de Azure. Incluso si tiene una conexión ExpressRoute, las consultas de DNS, la comprobación de la lista de revocación de certificados y las solicitudes de Azure Content Delivery Network se siguen enviando a través de la red pública de Internet.
 
+### 1. Tailwind Traders desea crear un túnel de comunicación seguro entre sus sucursales. ¿Cuál de las siguientes tecnologías no se puede usar?
+
+### FTP implícito por SSL
+
+### 2. Tailwind Traders quiere usar Azure ExpressRoute para conectar su red local a la nube de Microsoft. ¿Cuál de las siguientes opciones no es un modelo de ExpressRoute que Tailwind Traders pueda usar?
+
+### Red privada virtual de sitio a sitio
+
+### 3. ¿Cuál de las siguientes opciones puede usar para vincular redes virtuales?
+
+### Emparejamiento de redes virtuales de Azure
+
+### 4. ¿Cuál de las siguientes opciones no es una de las ventajas de ExpressRoute?
+
+### Comunicación de red cifrada
+
 
 
 
