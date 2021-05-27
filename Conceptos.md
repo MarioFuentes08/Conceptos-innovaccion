@@ -1664,7 +1664,253 @@ Supongamos que elige un espacio de direcciones de 10.0.0.0/24 para la primera re
 
 ### Comunicación de red cifrada
 
+# **23.-Elija el mejor servicio de IA para sus necesidades**
 
+### La inteligencia artificial (IA) es una categoría de la informática que adapta y mejora su capacidad de toma de decisiones a lo largo del tiempo en función de sus éxitos y errores. 
 
+## *Identificación de las opciones de producto*
 
+### El objetivo de la IA es crear un sistema de software que pueda adaptarse o aprender algo por sí mismo sin estar programado explícitamente para hacerlo.
 
+### Existen dos enfoques básicos en la IA. El primero consiste en emplear un sistema de aprendizaje profundo (deep learning) que se modela en la red neuronal de la mente humana, lo que le permite descubrir, aprender y crecer a través de la experiencia.
+
+### El segundo enfoque es el aprendizaje automático (machine learning), una técnica de la ciencia de datos que usa los datos existentes para entrenar un modelo, probarlo y aplicarlo a nuevos datos para pronosticar comportamientos, resultados y tendencias futuros.
+
+### Prácticamente cualquier dispositivo o sistema de software que recopila datos textuales, visuales y de audio podrían alimentar un modelo de aprendizaje automático que haga que ese dispositivo o sistema de software sea más inteligente
+
+## *Opciones de producto de Azure*
+
+### Microsoft cuenta con tres ofertas de productos principales, cada una de las cuales está diseñada para una audiencia y un caso de uso concretos. Cada opción proporciona un conjunto diverso de herramientas, servicios y API de programación.
+
+## *Azure Machine Learning*
+### Azure Machine Learning es una plataforma para realizar predicciones. Consta de herramientas y servicios que le permiten conectarse a los datos para entrenar y probar modelos para encontrar el que prediga con mayor precisión un resultado futuro. 
+
+### Con Azure Machine Learning, puede realizar lo siguiente:
+
+* Crear un proceso que defina cómo obtener los datos, cómo tratar los datos que faltan o que son incorrectos, cómo dividir los datos en un conjunto de entrenamiento o de pruebas y cómo enviar los datos al proceso de entrenamiento.
+
+* Entrenar y evaluar modelos predictivos mediante herramientas y lenguajes de programación conocidos por los científicos de datos.
+
+* Crear canalizaciones que definan dónde y cuándo ejecutar los experimentos de proceso intensivo necesarios para puntuar los algoritmos en función de los datos de entrenamiento y de prueba.
+
+* Implementar el algoritmo de mejor rendimiento como una API en un punto de conexión para que otras aplicaciones puedan consumirlo en tiempo real.
+
+### Elija Azure Machine Learning cuando los científicos de datos necesiten un control completo sobre el diseño y el entrenamiento de un algoritmo con sus propios datos. 
+
+## *Azure Cognitive Services*
+
+### Azure Cognitive Services proporciona modelos de aprendizaje automático creados previamente que permiten a las aplicaciones ver, oír, hablar, comprender e incluso empezar a pensar. Use Azure Cognitive Services para solucionar problemas generales, como el análisis de texto para detectar opiniones o el análisis de imágenes para reconocer objetos o caras. No es necesario tener conocimientos de aprendizaje automático ni ciencia de datos para usar estos servicios. Los desarrolladores acceden a Azure Cognitive Services mediante API y pueden incluir fácilmente estas características en solo unas pocas líneas de código.
+
+### Azure Cognitive Services, en su mayor parte, proporciona modelos previamente entrenados para que pueda traer sus datos en directo a fin de obtener predicciones.
+
+### Azure Cognitive Services se puede dividir en las categorías siguientes:
+
+* Servicios de lenguaje: permita que las aplicaciones procesen lenguaje natural con scripts precompilados, evalúen opiniones y aprendan a reconocer lo que quieren los usuarios.
+
+* Servicios de voz: convierta voz en texto y texto en voz de sonido natural. Traduzca de un idioma a otro y habilite el reconocimiento y la verificación del hablante.
+
+* Servicios de visión: agregue capacidades de reconocimiento e identificación al analizar imágenes, vídeos y otro contenido visual.
+
+* Servicios de decisión: agregue recomendaciones personalizadas para cada usuario que mejoren automáticamente cada vez que se usen, modere contenido para supervisar y quitar el contenido ofensivo o arriesgado y detecte anomalías en los datos de series temporales.
+
+## *Azure Bot Service*
+
+### Azure Bot Service y Bot Framework son plataformas para crear agentes virtuales que comprenden y responden a preguntas como un ser humano. Azure Bot Service se diferencia de Azure Machine Learning y Azure Cognitive Services en que tiene un caso de uso concreto: crear un agente virtual que pueda comunicarse de forma inteligente con los usuarios. En segundo plano, el bot que crea usa otros servicios de Azure, como Azure Cognitive Services, para comprender lo que solicitan sus homólogos humanos.
+
+### Los bots se pueden usar para convertir tareas sencillas y repetitivas, como tomar una reserva de cena o recopilar información de perfil, en sistemas automatizados que ya no requieran la intervención humana directa. Los usuarios conversan con un bot mediante texto, tarjetas interactivas y voz. Una interacción con un bot puede ser tanto una pregunta y una respuesta rápidas como una conversación sofisticada que proporciona acceso a servicios de forma inteligente.
+
+## *Análisis de los criterios de decisión*
+
+## *¿Está creando un agente virtual que interactúa con seres humanos mediante el lenguaje natural?*
+
+### Use Azure Bot Service cuando necesite crear un agente virtual para interactuar con los usuarios mediante el lenguaje natural. Bot Service integra orígenes de conocimiento, procesamiento de lenguaje natural y factores de forma para permitir la interacción entre distintos canales.
+
+### Antes de entrar de pleno en la creación de una experiencia de chat personalizada con Bot Service, puede que sea mejor buscar soluciones precompiladas sin código que abarquen los escenarios habituales. Por ejemplo, puede emplear QnA Maker, disponible en Azure Marketplace, para crear, entrenar y publicar un bot sofisticado que use páginas de preguntas más frecuentes, sitios web de soporte técnico, manuales de productos, documentos de SharePoint o contenido editorial a través de una interfaz de usuario fácil de usar o mediante las API de REST.
+
+## *¿Necesita un servicio que pueda comprender el contenido y el significado de imágenes, vídeos y audios o traducir texto a un idioma diferente?*
+
+### Use Azure Cognitive Services cuando necesite realizar tareas de uso general, como la conversión de voz en texto, la integración con búsquedas o la identificación de objetos en una imagen. Azure Cognitive Services es de uso general, lo que significa que muchos tipos diferentes de clientes pueden beneficiarse del trabajo que Microsoft ya ha llevado a cabo para entrenar y probar estos modelos y ofrecerlos de forma económica a escala.
+
+## *¿Necesita predecir el comportamiento del usuario o proporcionar a los usuarios recomendaciones personalizadas en la aplicación?*
+
+### El servicio Azure Cognitive Services Personalizer supervisa las acciones de los usuarios en una aplicación. Puede usar Personalizer para predecir su comportamiento y proporcionar experiencias relevantes a medida que identifique patrones de uso. De nuevo, podría capturar y almacenar el comportamiento del usuario y crear su propia solución de Azure Machine Learning personalizada para realizar estas acciones, pero este enfoque requeriría mucho esfuerzo y gastos.
+
+## *¿La aplicación predecirá resultados futuros a partir de datos históricos privados?*
+### Elija Azure Machine Learning cuando necesite analizar datos para predecir resultados futuros. Por ejemplo, supongamos que necesita analizar transacciones financieras realizadas durante años para detectar nuevos patrones que podrían ayudarle a crear nuevos productos y servicios para los clientes de su empresa y ofrecer esos nuevos servicios durante las llamadas rutinarias del servicio al cliente. 
+
+## *¿Necesita crear un modelo con sus propios datos o realizar una tarea distinta de las mencionadas anteriormente?*
+
+### Use Azure Machine Learning para obtener la máxima flexibilidad. Los científicos de datos y los ingenieros de IA pueden usar las herramientas con las que están familiarizados y los datos que les proporcione para desarrollar modelos de aprendizaje profundo y de aprendizaje automático adaptados a sus requisitos particulares.
+
+## *Uso de Machine Learning para sistemas de ayuda a la toma de decisiones*
+
+### El sitio web de comercio electrónico de Tailwind Traders permite a los clientes examinar y comprar artículos que se pueden entregar o recoger en la tienda de venta directa más cercana a su ubicación.
+
+### El equipo de marketing está convencido de que puede aumentar drásticamente las ventas si sugiere productos adicionales. El equipo podría codificar estas sugerencias de forma rígida, pero considera que un enfoque más orgánico sería usar los datos de ventas de varios años, así como las nuevas tendencias de compra, para decidir qué productos se muestran al comprador. 
+
+### Los expertos en ciencia de datos del equipo de marketing ya han realizado algún análisis inicial del dominio del problema y han determinado que pueden tardar meses en crear un prototipo y, posiblemente, un año en implementarlo.
+
+## *¿Qué servicio debe elegir?*
+
+### En primer lugar, ¿Tailwind Traders está creando un agente virtual que interactúa con seres humanos mediante el lenguaje natural? No, por lo que Azure Bot Service no es un buen candidato para este escenario.
+
+### En segundo lugar, ¿Tailwind Traders necesita un servicio que pueda comprender el contenido y el significado de imágenes, vídeos y audios o traducir texto a un idioma diferente? No, por lo que Cognitive Services no ayudará a la empresa.
+
+### En tercer lugar, ¿Tailwind Traders necesita predecir el comportamiento del usuario o proporcionar recomendaciones personalizadas a los usuarios? Sí. Sin embargo, la creación de recomendaciones basadas en el comportamiento del usuario es solo una parte del requisito. Tailwind Traders necesita crear un modelo complejo que incorpore datos históricos de ventas, datos de tendencias de ventas, inventario, etc. Es posible que el servicio Azure Cognitive Services Personalizer pueda desempeñar una función, pero no podría abordar toda la amplitud del proyecto por sí solo.
+
+### En cuarto lugar, ¿la aplicación de Tailwind Traders predecirá resultados futuros a partir de datos históricos privados? Sí, y por este motivo, en este escenario, Azure Machine Learning es probablemente la mejor opción.
+
+### El éxito de este esfuerzo dependerá principalmente de la capacidad del modelo para seleccionar con precisión los productos de venta adecuados que se sugieren al comprador. 
+
+## *Uso de Cognitive Services para el análisis de datos*
+
+### La primera generación del sitio web de comercio electrónico de Tailwind Traders solo se encontraba disponible en inglés. Pero cuando el equipo de marketing patrocinó un estudio demográfico para las tiendas físicas de la empresa, descubrió que, de media, solo el 80 % de los clientes potenciales hablan inglés. En algunos barrios, ese número se reduce al 50 %. El equipo considera que agregar varios idiomas 
+
+### *¿Qué servicio debe elegir?*
+
+### En primer lugar, ¿Tailwind Traders está creando un agente virtual que interactúa con seres humanos mediante el lenguaje natural? No, por lo que Azure Bot Service no es un buen candidato para este escenario.
+
+### En segundo lugar, ¿Tailwind Traders necesita un servicio que pueda comprender el contenido y el significado de imágenes, vídeos y audios o traducir texto a un idioma diferente? Sí. La traducción de contenido textual de un idioma a otro es una tarea de uso general que se puede simplificar mediante el servicio Translator de Azure Cognitive Services. El servicio es fácil de integrar en sus aplicaciones, sitios web, herramientas y soluciones. Permite agregar experiencias de usuario multilingües en más de 60 idiomas y se puede usar en cualquier plataforma de hardware con cualquier sistema operativo para la traducción de texto a texto.
+
+### Azure Cognitive Services es probablemente la mejor opción para este escenario, pero vamos a seguir aplicando los criterios de decisión para asegurarnos.
+
+### En tercer lugar, ¿Tailwind Traders necesita predecir el comportamiento del usuario o proporcionar recomendaciones personalizadas a los usuarios? No, por lo que el servicio Personalizer de Azure Cognitive Services no es un buen candidato.
+
+### Por último, ¿la aplicación de Tailwind Traders necesitará predecir resultados futuros a partir de datos históricos privados? No. Aunque sería posible crear un modelo de aprendizaje automático para realizar la traducción a varios idiomas, sería costoso y lento para Tailwind Traders intentar compilar sus propios modelos de traducción.
+
+## *Uso de Bot Service para experiencias interactivas de chat*
+
+### El equipo de servicio al cliente ha solicitado durante mucho tiempo un agente virtual para que se ocupe de la inmensa mayoría de las preguntas que se le pidan.
+
+### El equipo quiere que los compradores se sientan como si estuvieran interactuando con un ser humano real. Cuando quede claro que el agente virtual no puede proporcionar una respuesta, la sesión de chat se debería transferir a un agente humano.
+
+## *¿Qué servicio debe elegir?*
+
+### En primer lugar, ¿Tailwind Traders está creando un agente virtual que interactúa con seres humanos mediante el lenguaje natural? Sí. Azure Bot Service debería usarse en este escenario para implementar una experiencia de chat de agente virtual. Bot Service podría beneficiarse de información incluida en la página de preguntas más frecuentes del sitio web, junto con miles de sesiones de chat almacenadas entre compradores y representantes del servicio al cliente.
+
+### Aunque es probable que ya haya encontrado la mejor opción para este escenario, siga aplicando los criterios de decisión para ver si hay opciones adicionales que también funcionen.
+
+### En segundo lugar, ¿Tailwind Traders necesita un servicio que pueda comprender el contenido y el significado de imágenes, vídeos y audios o traducir texto a un idioma diferente? Posiblemente, sí. En este escenario, Azure Cognitive Services podría usarse junto con Bot Service para compilar la solución. Para acelerar la implementación, los desarrolladores podrían explorar el uso de soluciones precompiladas, como QnA Maker (parte de Cognitive Services) o Power Virtual Agents. Además, cualquier solución de bot de Azure podría implementar varios servicios de Azure Cognitive Services, como Language Understanding (LUIS) y, posiblemente, Translator para traducir del idioma del comprador al inglés y viceversa.
+
+### En tercer lugar, ¿Tailwind Traders necesita predecir el comportamiento del usuario o proporcionar recomendaciones personalizadas a los usuarios? No. Azure Cognitive Services Personalizer no es un buen candidato para este escenario.
+
+### Por último, ¿la aplicación de Tailwind Traders necesitará predecir resultados futuros a partir de datos históricos privados? No. Aunque Tailwind Traders tiene datos históricos para alimentar un modelo, lo que permitiría usar Azure Machine Learning para crear una solución de chat, ya existe otra opción que está adaptada a la experiencia del bot de chat.
+
+## *Prueba de conocimientos*
+
+### 1. Debe predecir el comportamiento futuro a partir de acciones anteriores. ¿Qué opción de producto debe seleccionar como candidato?
+### Azure Machine Learning
+
+### 2. Debe crear una interfaz de equipo humano mediante el lenguaje natural para responder a las preguntas de los clientes. ¿Qué opción de producto debe seleccionar como candidato?
+### Azure Bot Service
+
+### 3. Debe identificar el contenido de las imágenes de productos para crear automáticamente etiquetas alternativas para las imágenes con el formato correcto. ¿Qué opción de producto es la mejor candidata?
+### Azure Cognitive Services
+
+# **26.-Elección de la mejor tecnología sin servidor de Azure para su escenario empresarial**
+
+### El término informática sin servidor se usa para describir un entorno de ejecución que se configura y administra de manera automática. El cliente tan solo debe escribir código o conectar y configurar los componentes en un editor visual y, después, especificar las acciones que desencadenan la funcionalidad, como un temporizador o una solicitud HTTP. Lo mejor de todo es que únicamente se paga en función del uso real del código y que no hay que preocuparse de las interrupciones, dado que el código puede hacer un escalado instantáneo para satisfacer la demanda.
+
+## *Identificación de las opciones de producto*
+
+### La informática sin servidor es un entorno de ejecución hospedado en la nube que ejecuta código, pero abstrae el entorno de hospedaje subyacente. El término informática sin servidor es poco apropiado, ya que, al fin y al cabo, hay un servidor (o un grupo de servidores) que ejecuta el código o la funcionalidad.
+
+### La idea clave es que el cliente no es responsable de la configuración o el mantenimiento del servidor. No tiene que preocuparse de las interrupciones ni de escalarlo cuando hay un incremento en la demanda. El proveedor de la nube se encarga de todo el mantenimiento y el escalado.
+
+### La informática sin servidor suele utilizarse para controlar los escenarios de back-end. En otras palabras, la informática sin servidor es responsable de enviar mensajes de un sistema a otro o de procesar mensajes enviados desde otros sistemas. No se usa para sistemas orientados al usuario, sino que funciona en segundo plano.
+
+## *Azure Functions*
+### Con el servicio Azure Functions, puede hospedar un único método o función mediante un lenguaje de programación popular en la nube que se ejecuta en respuesta a un evento. Un ejemplo de un evento podría ser una solicitud HTTP, un mensaje nuevo en una cola o un mensaje en un temporizador.
+
+### Por su naturaleza atómica, Azure Functions puede servir para muchos propósitos en el diseño de una aplicación. Las funciones se pueden escribir con muchos lenguajes de programación comunes, como C#, Python, JavaScript, Typescript, Java y PowerShell.
+
+### Azure Functions se escala automáticamente, y los cargos se acumulan solo cuando se desencadena una función. Estas características convierten a Azure Functions en una elección sólida cuando la demanda es variable. 
+
+### Una función de Azure es un entorno sin estado. Una función se comporta como si se reiniciara cada vez que responde a un evento. Esta característica resulta muy conveniente para procesar los datos entrantes. Y si el estado es necesario, la función se puede conectar a una cuenta de almacenamiento de Azure.
+
+### Azure Functions puede realizar tareas de orquestación mediante una extensión llamada Durable Functions, que permite a los desarrolladores encadenar funciones al tiempo que se mantiene el estado.
+### La solución Azure Functions es ideal si le preocupa solo el código que ejecuta el servicio y no la infraestructura o la plataforma subyacente.
+
+## *Azure Logic Apps*
+
+### Logic Apps es una plataforma de desarrollo de poco código o sin código hospedada como un servicio en la nube. El servicio le ayuda a automatizar y organizar tareas, procesos empresariales y flujos de trabajo cuando tiene que integrar aplicaciones, datos, sistemas y servicios en empresas u organizaciones. Logic Apps simplifica el diseño y la creación de soluciones escalables en la nube, en el entorno local o en ambos. Esta solución abarca la integración de aplicaciones, la integración de datos, la integración de sistemas, la integración de aplicaciones empresariales (EAI) y la integración de negocio a negocio (B2B).
+
+### Para crear soluciones de integración empresarial con Azure Logic Apps, se puede elegir entre una galería creciente de más de 200 conectores. La galería incluye servicios como Salesforce, SAP, Oracle DB y recursos compartidos de archivos.
+
+## *¿Cuál es la diferencia entre estos servicios?*
+
+### Puede llamar a Azure Functions desde Azure Logic Apps y viceversa. La principal diferencia entre los dos servicios es su intención. Azure Functions es un servicio informático sin servidor, y Azure Logic Apps está diseñado para ser un servicio de orquestación sin servidor. Aunque puede usar Azure Functions para orquestar un proceso empresarial de larga duración que implique varias conexiones, su caso de uso principal no era ese cuando se diseñó.
+
+### Además, los dos servicios tienen un precio diferente. Los precios de Azure Functions se basan en el número de ejecuciones y en el tiempo ejecución de cada una. Los precios de Logic Apps se basan en el número de ejecuciones y el tipo de conectores que se usan.
+
+## *Análisis de los criterios de decisión*
+
+### Con dos opciones sin servidor posibles, puede ser difícil saber cuál es la más conveniente para el trabajo que debe realizarse. En esta unidad, analizaremos los criterios que emplean los expertos al elegir qué servicio sin servidor satisface mejor a una determinada necesidad empresarial. 
+
+## *¿Necesita realizar una orquestación entre API conocidas?*
+### Como mencionamos anteriormente, Azure Logic Apps se diseñó pensando en la orquestación, desde el configurador visual basado en web hasta el modelo de precios. Logic Apps es excelente a la hora de conectar una gran variedad de servicios distintos mediante sus API para pasar y procesar los datos a través de los muchos pasos de un flujo de trabajo.
+
+## *¿Necesita ejecutar algoritmos personalizados o realizar análisis y búsquedas de datos especiales?*
+
+### Con Azure Functions, puede usar la expresividad completa de un lenguaje de programación en una forma compacta. Esto le permite crear de manera concisa algoritmos complejos u operaciones de búsqueda y análisis de datos. El cliente es el responsable de mantener el código, controlar las excepciones de manera resistente, etc.
+
+## *¿Tiene tareas automatizadas escritas en un lenguaje de programación imperativo?*
+
+### Si ya tiene la orquestación o la lógica de negocios expresada en C#, Java, Python u otro lenguaje de programación popular, podría ser más fácil trasladar el código al cuerpo de una aplicación de funciones de Azure Functions que volver a crearlo mediante Azure Logic Apps.
+
+## *¿Prefiere un flujo de trabajo visual (declarativo) o escribir código (imperativo)?*
+
+### En última instancia, la elección se reduce a si prefiere trabajar en un entorno declarativo o en uno imperativo. Los desarrolladores que ya tienen experiencia con un lenguaje de programación imperativo pueden preferir adoptar una postura imperativa con respecto a la automatización y la orquestación. 
+
+## *Uso de Azure Functions*
+### Los datos de cada producto que se vende en Tailwind Traders se empaquetan como un mensaje JSON y se envían a un centro de eventos. El centro de eventos distribuye el mensaje JSON a los suscriptores, lo que permite notificar a los distintos sistemas.
+
+### Tailwind Traders quiere actualizar su sitio de comercio electrónico para incluir el seguimiento del inventario en tiempo real. Un servicio de Windows escrito en C# contiene toda la lógica necesaria para:
+* Recuperar los mensajes
+* Analizar JSON
+* Realizar una búsqueda en varias bases de datos para buscar información adicional del producto
+* Puede enviar notificaciones al departamento de compras para que pueda reponer las cantidades que se encuentran por debajo de determinados niveles.
+
+### El servicio de Windows se ejecuta en una máquina virtual hospedada en Azure.
+
+### La mayoría del tiempo, este sistema funciona correctamente. No obstante, hay una demanda elevada de algunos productos, mientras que de otros productos hay pocas unidades en los almacenes. 
+
+## *¿Qué servicio debe elegir?*
+
+### Como el equipo de desarrolladores de Tailwind Traders ya tiene la lógica escrita en C#, tendría sentido copiar el código C# pertinente del servicio de Windows y trasladarlo a una función de Azure. Los desarrolladores tendrían que enlazar la función para que se desencadene cada vez que aparezca un mensaje nuevo en una determinada cola.
+
+## *¿Por qué no elegir Azure Logic Apps?*
+
+### Es posible implementar la misma lógica en Azure Logic Apps. No obstante, dado que el equipo ya ha invertido tiempo en crear el servicio en C#, puede usar el mismo código en una función de Azure.
+
+## *Uso de Azure Logic Apps*
+### Tras una compra, Tailwind Traders envía a sus clientes una invitación aleatoriamente para participar en una encuesta de satisfacción del cliente. Actualmente, los resultados de dicha encuesta se agregan, se calcula su promedio y se plasman en un gráfico. Pero el departamento de atención al cliente, con una actitud proactiva, quiere ponerse en contacto con los clientes que proporcionan puntuaciones bajas y dejan comentarios con una opinión negativa.
+
+### Lo ideal sería que las puntuaciones de satisfacción del cliente negativas desencadenasen un flujo de trabajo de retención de clientes. En primer lugar, se puede generar un análisis de opinión en función de los comentarios libres, se enviaría un correo electrónico al cliente con una disculpa y un código de descuento, y este mensaje se enrutaría al servicio de atención al cliente de Dynamics 365 para que pudiera programar un correo electrónico de seguimiento.
+
+### Desafortunadamente, no hay ningún desarrollador de Tailwind Traders disponible para realizar este proyecto. 
+
+## *¿Qué servicio debe elegir?*
+### En este escenario, es probable que Azure Logic Apps sea la mejor solución. Un profesional de la nube o de TI puede usar los conectores existentes para realizar un análisis de opinión mediante el conector de Azure Cognitive Services, enviar un correo electrónico con el conector de Office 365 Outlook y crear un registro y un correo electrónico de seguimiento con el conector de servicio al cliente de Dynamics 365.
+
+### Dado que Azure Logic Apps es un servicio sin código o de poco código, no se necesitan desarrolladores. 
+
+## *¿Por qué no elegir Azure Functions?*
+
+### Aunque es posible compilar toda la solución mediante Azure Functions, este enfoque supondría todo un desafío si no se puede asignar el proyecto a ningún desarrollador de software.
+
+### Es un escenario ideal para Azure Logic Apps. Ya existen conectores para cada uno de los pasos descritos en el flujo de trabajo. Un desarrollador tendría que llevar a cabo una gran labor de investigación, desarrollo y pruebas para crear una solución que use todos estos sistemas de software diferentes.
+
+## *Prueba de conocimientos*
+
+### 1. Debe procesar los mensajes de una cola, analizarlos mediante alguna lógica imperativa existente escrita en Java y, después, enviarlos a una API de terceros. ¿Qué opción sin servidor debería elegir?
+
+### Azure Functions
+
+### 2. Quiere orquestar un flujo de trabajo con las API de varios servicios conocidos. ¿Cuál es la mejor opción para este escenario?
+
+### Azure Logic Apps
+
+### 3. Su equipo no tiene mucha experiencia escribiendo código personalizado, pero ve un gran valor en la automatización de diversos procesos empresariales importantes. ¿Cuál de las siguientes opciones es la mejor opción para el equipo?
+
+### Azure Logic Apps
