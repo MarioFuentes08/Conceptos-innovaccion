@@ -1807,7 +1807,460 @@ Supongamos que elige un espacio de direcciones de 10.0.0.0/24 para la primera re
 ### 3. Debe identificar el contenido de las imágenes de productos para crear automáticamente etiquetas alternativas para las imágenes con el formato correcto. ¿Qué opción de producto es la mejor candidata?
 ### Azure Cognitive Services
 
-# **26.-Elección de la mejor tecnología sin servidor de Azure para su escenario empresarial**
+# **24.-Elección de las mejores herramientas para ayudar a que las organizaciones creen mejores soluciones**
+
+### Los desarrolladores de software y los profesionales de operaciones se esfuerzan por crear sistemas de software que funcione que satisfagan las necesidades de la organización. Pero, a veces, los propósitos de sus objetivos a corto plazo se cruzan entre sí, lo que da lugar a problemas técnicos, retrasos y tiempos de inactividad.
+
+### DevOps es un nuevo enfoque que ayuda a alinear los equipos técnicos que trabajan para conseguir un objetivo común. Para lograr esta alineación, las organizaciones emplean prácticas y procesos que buscan automatizar el desarrollo, el mantenimiento y la implementación continuos de sistemas de software.
+### Cuando se llevan a cabo correctamente, las prácticas y los procesos de DevOps tocan casi todos los aspectos de la empresa, por no mencionar el ciclo de vida de desarrollo de software, incluida la planeación, la administración de proyectos y la colaboración entre desarrolladores de software, así como con equipos de operaciones y de control de calidad.
+
+### DevOps requiere un cambio de mentalidad fundamental de arriba abajo. Las organizaciones no pueden limitarse a instalar herramientas de software o a adoptar servicios y esperar obtener todas las ventajas que promete DevOps.
+
+## *Azure DevOps Services*
+### Azure DevOps Services es un conjunto de servicios que aborda cada fase del ciclo de vida de desarrollo de software.
+
+* Azure Repos es un repositorio de código fuente centralizado en el que los profesionales de desarrollo de software, ingeniería DevOps y documentación pueden publicar su código para su revisión y colaboración.
+* Azure Boards es un conjunto de administración de proyectos ágil que incluye paneles Kanban, informes, ideas de seguimiento y trabajo desde epopeyas de alto nivel hasta incidencias y elementos de trabajo.
+* Azure Pipelines es una herramienta de automatización de canalizaciones de CI/CD.
+* Azure Artifacts es un repositorio para hospedar artefactos, como código fuente compilado, que se puede incluir en los pasos de canalización de pruebas o de implementación.
+* Azure Test Plans es una herramienta de pruebas automatizadas que se puede usar en una canalización de CI/CD para garantizar la calidad antes de publicar una versión de software.
+
+### Azure DevOps es una herramienta madura con un amplio conjunto de características que comenzó inicialmente como software de servidor local y evolucionó a una oferta de software como servicio (SaaS) de Microsoft.
+
+## *GitHub y Acciones de GitHub*
+
+### Git es una herramienta de administración de código fuente descentralizada, mientras que GitHub es una versión hospedada de Git que actúa como repositorio remoto principal. 
+
+### Proporciona las funcionalidades siguientes:
+
+* Es un repositorio de código fuente compartido, que incluye herramientas que permiten que los desarrolladores realicen revisiones de código mediante la adición de comentarios y preguntas en una vista web del código fuente antes de que se pueda combinar en la base de código principal.
+* Facilita la administración de proyectos, incluidos los paneles Kanban.
+* Admite la emisión de informes, las discusiones y el seguimiento.
+* Incluye herramientas de automatización de canalizaciones de CI/CD.
+* Incluye una wiki para la documentación colaborativa.
+* Se puede ejecutar desde la nube o localmente.
+
+### Acciones de GitHub permite la automatización del flujo de trabajo con desencadenadores para muchos eventos del ciclo de vida. Un ejemplo de esto es la automatización de una cadena de herramientas de CI/CD.
+
+### Una cadena de herramientas es una combinación de herramientas de software que ayudan en la entrega, el desarrollo y la administración de aplicaciones de software a lo largo del ciclo de vida del desarrollo de sistemas. La salida de una herramienta en la cadena de herramientas es la entrada de la siguiente herramienta en la cadena de herramientas. 
+
+### Al ser tan similares muchas de las características de GitHub y Azure DevOps, es probable que se pregunte qué producto debe elegir para la organización. No haya una respuesta clara.
+
+### GitHub es una herramienta más ligera que Azure DevOps, y se centra en los desarrolladores individuales que contribuyen al código abierto. Por otro lado, Azure DevOps se centra en el desarrollo empresarial, con herramientas de planeamiento y administración de proyectos más pesadas y un control de acceso más específico.
+
+### No está limitado a elegir entre Azure DevOps Services o GitHub y Acciones de GitHub. En la práctica, puede mezclar y combinar estos servicios en función de sus necesidades. Por ejemplo, puede usar los repositorios de GitHub con Azure Boards para el seguimiento de los elementos de trabajo.
+
+## *Azure DevTest Labs*
+
+### Azure DevTest Labs proporciona un medio automatizado para administrar el proceso de compilación, configuración y anulación de máquinas virtuales que contienen las compilaciones de los proyectos de software. De esta manera, los desarrolladores y los evaluadores pueden realizar pruebas en diferentes entornos y compilaciones. 
+
+### Supongamos que necesita probar una nueva característica en una versión anterior de un sistema operativo. Azure DevTest Labs puede configurar todo automáticamente a petición. Una vez completadas las pruebas, DevTest Labs puede apagar y desaprovisionar la máquina virtual, lo que ahorra dinero cuando no está en uso.
+
+## *Análisis de los criterios de decisión*
+
+## *¿Necesita automatizar y administrar la creación de laboratorios de pruebas?*
+
+### Si su objetivo es automatizar la creación y la administración de un entorno de laboratorio de pruebas, considere la posibilidad de elegir Azure DevTest Labs. De las tres herramientas y servicios que hemos descrito, es el único que ofrece esta funcionalidad.
+
+## *¿Está compilando software de código abierto?*
+
+### Aunque Azure DevOps puede publicar repositorios de código públicos, GitHub es desde hace tiempo el host preferido para el software de código abierto. Si va a compilar software de código abierto, es probable que elija GitHub si no tiene ningún otro motivo que la visibilidad y la aceptación general de la comunidad de desarrollo de código abierto.
+
+### En la práctica, puede mezclar y combinar estos servicios en función de sus necesidades. Por ejemplo, puede usar repositorios de GitHub con Azure Boards para el seguimiento de los elementos de trabajo.
+
+## *En cuanto a la administración de código fuente y las herramientas de DevOps, ¿qué nivel de granularidad necesita para los permisos?*
+
+### GitHub funciona en un modelo simple de permisos de lectura y escritura para cada característica, mientras que Azure DevOps tiene un conjunto de permisos mucho más pormenorizado que permite a las organizaciones restringir quién puede realizar la mayoría de las operaciones en todo el conjunto de herramientas.
+
+## *Con respecto a la administración de código fuente y las herramientas de DevOps, ¿cómo de sofisticados han de ser los informes y la administración de proyectos?*
+
+### Aunque GitHub tiene elementos de trabajo, incidencias y un panel Kanban, la administración de proyectos y la generación de informes es el área en la que destaca Azure DevOps. Azure DevOps es muy personalizable, lo que permite que un administrador agregue campos personalizados para capturar metadatos y otra información con cada elemento de trabajo. 
+
+## *En lo que respecta a la administración de código fuente y las herramientas de DevOps, ¿qué grado de integración con herramientas de terceros necesita?*
+
+### Aunque no recomendamos específicamente ninguna herramienta de terceros, es importante que conozca las inversiones existentes en herramientas y servicios de su organización, y que evalúe cómo pueden afectar a su elección estas dependencias. Es probable que la mayoría de los proveedores que crean herramientas de DevOps creen enlaces o API que se puedan usar tanto en Azure Pipelines como en Acciones de GitHub.
+
+## *Uso de Azure DevOps para administrar el ciclo de vida de desarrollo de aplicaciones*
+
+### El equipo de desarrollo de software de Tailwind Traders trabaja en muchos proyectos diferentes, tanto para uso interno como externo. El equipo necesita proporcionar a los directivos y los patrocinadores del proyecto informes de nivel ejecutivo, incluidos gráficos de evolución, el seguimiento del progreso con epopeyas y el seguimiento de la información personalizada que es específica de Tailwind Traders en cada elemento de trabajo e informe de errores.
+
+### El equipo directivo quiere asegurarse de que estas personas tienen acceso únicamente a la información que necesitan para realizar su trabajo.
+
+## *¿Qué servicios deberíamos elegir?*
+
+### En primer lugar, ¿Tailwind Traders necesita automatizar y administrar la creación de laboratorios de pruebas? No. Por lo tanto, en este escenario, Azure DevTest Labs no es un candidato.
+
+### En segundo lugar, ¿Tailwind Traders compila software de código abierto? Aunque no se indica específicamente, Tailwind Traders crea sistemas internos y externos, como su sistema de comercio electrónico, que no es de código abierto. 
+
+### En tercer lugar, ¿qué nivel de granularidad requiere Tailwind Traders para los permisos? Previamente, se indicó que Tailwind Traders contratará a empleados y proveedores temporales para el trabajo a corto plazo, por lo que el requisito de asignar permisos específicos es un aspecto importante que el equipo directivo tiene en consideración. En función de lo que hemos descrito en la unidad anterior, esta característica haría que Azure DevOps fuese el candidato principal. Con el uso de Azure DevOps
+
+### En cuarto lugar, ¿necesita Tailwind Traders una solución de generación de informes y administración de proyectos sofisticada? Sí, las características sólidas de administración de proyectos y de generación de informes son unas de las principales consideraciones. De nuevo, dada la cantidad de personalización de elementos de trabajo y generación de informes que quiere el equipo de administración, es probable que Azure DevOps sea una buena opción.
+
+### En quinto lugar, ¿necesita Tailwind Traders una integración estrecha con alguna herramienta de DevOps de terceros? La integración de herramientas no aparecía como consideración principal para este escenario.
+
+## *Uso de GitHub para contribuir al software de código abierto*
+
+### Tailwind Traders espera publicar una API que permita a terceros integrar sus propios inventarios de elementos nuevos y usados. Este enfoque permitiría a Tailwind Traders ofrecer una amplia variedad de productos directamente desde su sitio de comercio electrónico.
+
+### Aunque la implementación interna de la API es de código cerrado, Tailwind Traders quiere crear un conjunto de ejemplos que llamen a la API para realizar diversas acciones. El equipo necesita una plataforma para compartir código de ejemplo, recopilar comentarios sobre la API, permitir a los colaboradores informar de problemas y crear una comunidad en torno a las solicitudes de características.
+
+## *¿Qué servicio debe elegir?*
+
+### En primer lugar, ¿Tailwind Traders necesita automatizar y administrar la creación de laboratorios de pruebas? No. En este escenario, Azure DevTest Labs no es un candidato
+
+### En segundo lugar, ¿Tailwind Traders compila software de código abierto? Sí. Como se mencionó en una unidad anterior, los desarrolladores están habituados a ver este tipo de contenido disponible en GitHub. Dado que este escenario implica código abierto, GitHub es el candidato principal.
+
+### En tercer lugar, ¿qué nivel de granularidad requiere el equipo de Tailwind Traders para asignar permisos? Aunque no se indique explícitamente, el hecho de que Tailwind Traders acepte contribuciones de la comunidad, emita informes y, por lo general, intente crear una comunidad de desarrolladores en torno a los ejemplos de API, las necesidades de permisos de la empresa son básicas: los usuarios pueden ver solamente o ver y escribir. Este es otro motivo por el que GitHub sería un buen candidato para este escenario.
+
+### En cuarto lugar, ¿necesita Tailwind Traders una solución de generación de informes y administración de proyectos sofisticada? De nuevo, dada la naturaleza de este proyecto, el equipo no requiere una solución sofisticada de generación de informes y administración de proyectos. 
+
+### En quinto lugar, ¿necesita Tailwind Traders una integración estrecha con alguna herramienta de DevOps de terceros? La integración de herramientas no aparecía como consideración principal para este escenario y no hace que se acepte ni descarte ninguna herramienta.
+
+### GitHub es la mejor opción para este escenario. Aunque se podría usar Azure DevOps para que el repositorio sea público, algunas de las otras características que afectan a la comunidad de desarrollo, como los comentarios o los informes de errores, serían menos accesibles.
+
+## *Uso de Azure DevTest Labs para administrar entornos de prueba*
+
+### Tailwind Traders quiere ser más metódico y cuidadoso al enviar a producción nuevas versiones de su sitio web de comercio electrónico. La empresa ampliará su equipo de control de calidad (QA) y usará la nube para crear y hospedar máquinas virtuales. A través de este enfoque, crearán entornos de prueba que coincidan con el entorno de producción.
+
+### El equipo de administración tiene dudas sobre los costos de un entorno de prueba más automatizado. Por ejemplo, quiere asegurarse de que los profesionales de control de calidad no pierdan tiempo configurando el entorno de pruebas para que coincida con el entorno de producción. El equipo quiere asegurarse de que las máquinas virtuales se destruyan cuando ya no estén en uso. Le interesa limitar el número de máquinas virtuales que puede poner en marcha cada profesional de control de calidad.
+
+## *¿Qué servicio debe elegir?*
+
+### En primer lugar, ¿Tailwind Traders necesita automatizar y administrar la creación de laboratorios de pruebas? Sí. Parece que se trata de un trabajo para Azure DevTest Labs ya que puede hacer todo lo que el equipo necesita llevar a cabo en este escenario.
+
+### Podríamos seguir evaluando los criterios de decisión, pero no hacen falta ni Azure DevOps ni GitHub para este escenario. Recuerde que tanto Azure DevOps como GitHub podrían usarse para crear versiones de producto que se pueden incluir automáticamente en las máquinas virtuales que cree con fines de prueba.
+
+
+## *Prueba de conocimientos*
+
+### 1. ¿Cuál de las siguientes opciones no se utilizaría para automatizar un proceso de CI/CD?
+
+### AZURE BOARDS (Azure Boards es una herramienta de administración de proyectos ágil. )
+
+
+### 2. ¿Qué servicio podría ayudarle a administrar las máquinas virtuales que los desarrolladores y los evaluadores necesitan para asegurarse de que la nueva aplicación funciona en diferentes sistemas operativos?
+
+### AZURE DEVTEST LABS
+
+### 3. ¿A qué servicio le faltan características para asignar tareas de desarrolladores individuales en las que trabajar?
+
+### AZURE PIPELINES (Azure Pipelines es una herramienta de CI/CD para compilar una cadena de herramientas automatizada. )
+
+# **25.-Elección del mejor servicio de supervisión para visibilidad, información y mitigación de interrupciones**
+
+### Los sistemas de software modernos que se ejecutan en la nube son complejos, por lo que conocer el estado y el rendimiento de su entorno de hospedaje de aplicaciones —con todos sus niveles de servicios— supone todo un reto. Afortunadamente, Microsoft ofrece varias soluciones que pueden ayudarle a reaccionar rápidamente ante interrupciones, investigar problemas intermitentes, optimizar el uso y mantener una actitud proactiva en el control de los tiempos de inactividad planeados.
+
+## *Identificación de las opciones de productos*
+
+### A todas las empresas que usan la nube les surgen varias inquietudes o preguntas básicas.
+
+* ¿Usamos la nube correctamente? ¿Podemos aumentar el rendimiento sin incrementar el gasto en la nube?
+
+* ¿Gastamos más de lo necesario?
+
+* ¿Protegemos correctamente nuestros sistemas?
+
+* ¿Qué resistencia tienen nuestros recursos? Si experimentamos una interrupción en la región, ¿podríamos conmutar por error a otra región?
+
+* ¿Cómo se pueden diagnosticar y corregir los problemas que se producen de forma intermitente?
+
+* ¿Cómo podemos determinar rápidamente la causa de una interrupción?
+
+* ¿Cómo podemos aprender a planear el tiempo de inactividad?
+
+### Afortunadamente, con una combinación de soluciones de supervisión en Azure, puede:
+
+* Obtener respuestas, información y alertas para asegurarse de que ha optimizado el uso de la nube.
+
+* Determinar la causa principal de los problemas no planeados.
+
+* Prepararse de antemano para interrupciones planeadas.
+
+## *Opciones de productos*
+
+### A nivel general, hay tres ofertas principales de supervisión de Azure, cada una de las cuales tiene como objetivo una audiencia y un caso de uso específicos, y proporcionan un conjunto diverso de herramientas, servicios, API de programación, etc.
+
+## *Azure Advisor*
+
+### Azure Advisor evalúa los recursos de Azure y hace recomendaciones que contribuyen a mejorar la confiabilidad, la seguridad y el rendimiento, lograr la excelencia operativa y reducir los costos. Advisor está diseñado para ayudarle a ahorrar tiempo en la optimización en la nube. 
+
+### El panel Advisor de Azure Portal muestra recomendaciones personalizadas para todas las suscripciones, y los filtros permiten seleccionar recomendaciones para suscripciones, grupos de recursos o servicios específicos. 
+
+* Confiabilidad: se usa para garantizar y mejorar la continuidad de las aplicaciones críticas para la empresa.
+* Seguridad: se usa para detectar amenazas y vulnerabilidades que podrían dar lugar a infracciones de seguridad.
+* Rendimiento: se usa para mejorar la velocidad de las aplicaciones.
+* Costos: se usan para optimizar y reducir el gasto general de Azure.
+* Excelencia operativa: se usa para conseguir procedimientos recomendados de eficiencia en procesos y flujos de trabajo, manejabilidad de los recursos e implementación.
+
+## *Azure Monitor*
+
+### Azure Monitor es una plataforma que permite recopilar, analizar y mostrar datos, así como llevar a cabo acciones en función de las métricas y los datos registrados en todo el entorno local y de Azure.
+![azure_monitor](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/monitoring-fundamentals/media/2-identify-product-options-01.png)
+
+* A la izquierda aparece una lista de los orígenes de los datos de métricas y registros.
+
+* En el centro, puede ver cómo se almacenan los datos de registro y métricas en los repositorios centrales.
+
+* A la derecha, los datos se usan de diversas formas. Puede ver el rendimiento histórico y en tiempo real de cada nivel de la arquitectura, o bien consultar información combinada y detallada. Los datos se muestran en diferentes niveles para distintas audiencias. 
+
+### Además, puede usar los datos para ayudarle a reaccionar ante eventos críticos en tiempo real gracias a las alertas enviadas a los equipos por SMS, correo electrónico, etc.
+
+## *Azure Service Health*
+
+### Azure Service Health proporciona una vista personalizada del estado de los servicios, regiones y recursos de Azure en los que se basa su infraestructura. El sitio web status.azure.com, que muestra solo los principales problemas que afectan de manera generalizada a los clientes de Azure, no refleja el panorama completo. Sin embargo, Azure Service Health muestra los problemas detectados de mayor y menor importancia que le afectan. Los problemas del servicio son poco frecuentes, pero es importante estar preparado para lo inesperado.
+
+### Service Health le ayuda a supervisar varios tipos de eventos:
+
+* Los problemas de servicio son problemas de Azure, como las interrupciones, que le afectan en este momento. Puede profundizar en los servicios y las regiones afectados, así como en las actualizaciones de los equipos de ingeniería
+
+* Mantenimiento planeado: este tipo de eventos pueden afectar a la disponibilidad. Puede profundizar en los servicios, las regiones y los detalles afectados para mostrar cómo influirá un evento y qué debe hacer. La mayoría de estos eventos se producen sin que tengan ningún impacto en el usuario y no se mostrarán aquí.
+
+* Avisos de estado: son problemas que exigen actuar para evitar la interrupción del servicio, e incluyen retiradas del servicio y cambios importantes. 
+
+
+## *Análisis de los criterios de decisión*
+
+### En esta unidad, analizará los criterios que emplean los expertos para elegir un servicio de supervisión de Azure para una determinada necesidad empresarial.
+
+
+## *¿Necesita analizar cómo usa Azure para reducir los costos? ¿Mejorar la resistencia? ¿Fortalecer la seguridad?*
+
+### Elija Azure Advisor si quiere realizar un análisis de los recursos implementados. Azure Advisor analiza la configuración y el uso de los recursos, y ofrece sugerencias sobre cómo optimizar la confiabilidad, la seguridad, el rendimiento, los costos y las operaciones según los procedimientos recomendados.
+
+## *¿Quiere supervisar los servicios de Azure o el uso de Azure?*
+
+### Si quiere mantener un control de Azure, especialmente de los servicios y regiones de los que dependa, debe elegir Azure Service Health. Puede ver el estado actual de los servicios de Azure de los que depende, las próximas interrupciones planeadas y los próximos servicios que se lanzarán. 
+
+## *¿Quiere medir eventos personalizados junto con otras métricas de uso?*
+
+### Elija Azure Monitor si quiere medir eventos personalizados y otros datos de telemetría recopilados. Los eventos personalizados, como los agregados al código fuente de las aplicaciones de software, pueden ayudar a identificar y diagnosticar la razón por la que la aplicación se comporta de una manera determinada.
+
+
+## *¿Necesita configurar alertas para las interrupciones o para cuando el escalado automático está a punto de implementar nuevas instancias?*
+
+### De nuevo, use Azure Monitor para configurar alertas de eventos clave relacionados con sus recursos específicos.
+
+## *Uso de Azure Advisor*
+
+### En Tailwind Traders quieren optimizar su gasto en la nube. Además, la organización está preocupada por las vulneraciones de seguridad, ya que la información de sus clientes y los datos del historial de compras están almacenados en bases de datos en la nube. A medida que aumentan los conocimientos de la organización sobre la nube, quiere comprender mejor el uso que hace de ella, conocer los procedimientos recomendados e identificar soluciones fáciles que permitan ajustar el gasto en la nube y reforzar sus prácticas de seguridad.
+
+## *¿Qué servicio debe elegir?*
+
+### La primera pregunta que debemos hacernos en este escenario es: ¿Tailwind Traders necesita analizar su uso de Azure en aras de la optimización? Sí. En Tailwind Traders creen que gastan demasiado y están preocupados por sus prácticas de seguridad. Por tanto, les gustaría analizar su uso de la nube cotejándolo con los procedimientos recomendados del sector. Por lo tanto, Azure Advisor es la opción perfecta para este escenario.
+
+### Aunque ya hayamos encontrado el producto adecuado, vamos a seguir analizando los criterios de decisión para este escenario.
+
+### La segunda pregunta que debemos hacernos es: ¿Tailwind Traders quiere supervisar el estado de los servicios de Azure que afectan a todos los clientes o a los recursos implementados en Azure? En este escenario, las operaciones no son importantes. No obstante, Azure Advisor analiza y proporciona recomendaciones para lograr la excelencia operativa.
+
+### La tercera pregunta es: ¿Tailwind Traders quiere medir los eventos personalizados junto con otras métricas de uso? La respuesta es no; la medición de eventos personalizados no se menciona como requisito y no se considera en este escenario.
+
+### Y la cuarta pregunta: ¿Tailwind Traders quiere configurar alertas para cuando se produzca una interrupción o el escalado automático esté a punto de implementar nuevas instancias? De nuevo, las operaciones no son importantes en este escenario. No obstante, Azure Advisor analiza y proporciona recomendaciones para lograr la excelencia operativa.
+
+### Azure Advisor es la opción de producto adecuada para ayudar a Tailwind Traders a optimizar y entender mejor su gasto y su postura de seguridad en la nube. Además, puede resultarles útil en otras áreas del uso que hacen de la nube.
+
+## *Uso de Azure Monitor*
+
+### El sitio web de comercio electrónico de Tailwind Traders está experimentando errores intermitentes, y el equipo desconoce el motivo. Dada la naturaleza de los errores, el equipo sospecha que se trata de un problema de la base de datos o del almacenamiento en caché. ¿Cuáles son las circunstancias que rodean los errores? ¿Solo sucede durante las horas máximo tráfico? ¿Cuál es el estado de la instancia de Azure SQL del equipo? ¿Cuál es el estado de su servidor de almacenamiento en caché de Redis? ¿Cómo puede hacer un seguimiento de los problemas hasta su causa principal?
+
+## *¿Qué servicio debe elegir?*
+
+### La primera pregunta que debemos hacernos en este escenario es: ¿Tailwind Traders necesita analizar su uso de Azure en aras de la optimización? No, la optimización no es el objetivo del equipo en este escenario
+
+
+### La segunda pregunta que debemos hacernos en este escenario es: ¿Tailwind Traders quiere supervisar el estado de los servicios de Azure que afectan a todos los clientes o a los recursos implementados en Azure? Dado que este problema se produce de forma intermitente, es poco probable que afecte a todo un servicio o a toda una región de Azure. Es más probable que haya un problema de lógica en alguna parte del código del sitio web de comercio electrónico u otro problema que provoque errores en la base de datos o bloqueos de almacenamiento en caché. 
+
+### La tercera pregunta es: ¿Tailwind Traders quiere medir los eventos personalizados junto con otras métricas de uso? Sí. Los desarrolladores de software pueden enviar información adicional sobre el estado de la aplicación web mediante Application Insights para ayudar a localizar la causa principal del problema. Application Insights se basa en la plataforma de Azure Monitor para almacenar información de eventos personalizados.
+
+## *Uso de Azure Service Health*
+
+### Tailwind Traders quiere que su entorno en la nube sea operativo. En concreto, su equipo de operaciones de la nube quiere que las partes interesadas conozcan de antemano cuándo se producirá el próximo tiempo de inactividad planeado. El equipo también quiere que sus arquitectos de soluciones estén al tanto de cuáles son los servicios que Microsoft planea retirar, de manera que puedan rediseñar sus productos de software en consecuencia.
+
+### Cuando se producen interrupciones, el equipo quiere averiguar rápidamente si el problema es específico de sus servicios o si se trata de una interrupción del servicio que afecta a muchos clientes de Azure. También quiere que las principales partes interesadas reciban informes en los que se explique cómo y por qué se ha producido el incidente, entre otra información.
+
+## *¿Qué servicio debe elegir?*
+
+### La primera pregunta que debemos hacernos en este escenario es: ¿Tailwind Traders necesita analizar su uso de Azure en aras de la optimización? No, Azure Advisor no es un candidato para este escenario.
+
+### La segunda pregunta que debemos hacernos es: ¿Tailwind Traders quiere supervisar el estado de los servicios de Azure que afectan a todos los clientes o a los recursos implementados en Azure? En este escenario, el requisito es estar al tanto de cuándo se producirá el próximo tiempo de inactividad planeado. Además, el equipo desea capturar informes de incidentes oficiales. Por esta razón, Azure Service Health es la opción más sólida para este escenario.
+
+## *Prueba de conocimientos*
+
+### 1. Quiere recibir una alerta cuando haya disponibles nuevas recomendaciones para mejorar su entorno de nube. ¿Qué servicio puede hacer esto?
+
+### *Azure Advisor*
+
+
+### 2. ¿Qué servicio ofrece un análisis oficial de la causa principal (RCA) de la interrupción en los incidentes de Azure?
+
+### *Azure Service Health* (Azure Service Health proporciona el historial de incidentes y RCA que se puede compartir con las partes interesadas.
+)
+
+### 3. ¿Qué servicio es una plataforma en la que se basa Application Insights y permite la supervisión de máquinas virtuales, contenedores y Kubernetes?
+### *Azure Monitor*
+
+
+# **26.-Elección de las mejores herramientas para administrar y configurar el entorno de Azure**
+
+### Mediante las herramientas de administración de Azure, los administradores y desarrolladores pueden interactuar con el entorno de nube para realizar tareas como:
+
+* Implementar decenas o cientos de recursos a la vez.
+
+* Configurar servicios individuales mediante programación.
+
+* Ver informes enriquecidos relativos al uso, el mantenimiento, los costos y mucho más.
+
+## *Identificación de las opciones de producto*
+
+### A grandes rasgos, hay dos categorías amplias de herramientas de administración: herramientas visuales y herramientas basadas en código.
+
+### Las herramientas visuales proporcionan acceso completo y visualmente sencillo a toda la funcionalidad de Azure. Sin embargo, las herramientas visuales pueden ser menos útiles para configurar una gran implementación de recursos con interdependencias y opciones de configuración.
+
+### Al intentar instalar y configurar rápidamente los recursos de Azure, la mejor opción suele ser usar una herramienta basada en código. Aunque al principio comprender los comandos y parámetros correctos puede conllevar más tiempo, una vez escritos se pueden guardar en archivos y usar de forma repetida según sea necesario. Además, el código que realiza la instalación y la configuración se puede almacenar, versionar y mantener junto con el código fuente de la aplicación en una herramienta de administración de código fuente, como Git. 
+
+### Hay dos enfoques a la infraestructura como código: código imperativo y código declarativo. El código imperativo detalla cada uno de los pasos que debe realizarse para lograr un resultado deseado. Por el contrario, el código declarativo solo detalla un resultado deseado, y es el intérprete quien debe decidir cuál es la mejor forma de lograr dicho resultado.
+
+## *Opciones de productos*
+
+## *El Portal de Azure*
+
+### Mediante Azure Portal, una interfaz de usuario basada en web, puede acceder a prácticamente todas las características de Azure. Azure Portal dispone de una UI gráfica sencilla en la que se pueden ver todos los servicios que se están usando, crear servicios nuevos, configurar los servicios y ver informes. Azure Portal es la primera experiencia para la mayoría de los usuarios de Azure. 
+
+## *Azure Mobile App*
+
+### Azure Mobile App le permite acceder a los recursos de Azure desde iOS y Android cuando no tiene el equipo a mano. Por ejemplo, puede:
+
+* Supervisar el mantenimiento y el estado de sus recursos de Azure.
+
+* Consultar alertas, diagnosticar y corregir problemas rápidamente, reiniciar una aplicación web o una máquina virtual (VM).
+
+* Ejecutar comandos de la CLI de Azure o de Azure PowerShell para administrar los recursos de Azure.
+
+## *Azure PowerShell*
+
+### Azure PowerShell es un shell que permite a los desarrolladores, y profesionales de TI y DevOps ejecutar comandos denominados cmdlets o command-lets. Estos comandos llaman a la API REST de Azure para realizar todas las tareas de administración posibles en Azure. Los cmdlets pueden ejecutarse de forma independiente o combinarse en un archivo de script y ejecutarse en conjunto para organizar:
+
+* La configuración de rutinas, la anulación y el mantenimiento de un único recurso o de varios recursos conectados.
+
+* La implementación de una infraestructura completa, que puede contener decenas o cientos de recursos, de código imperativo.
+
+### La captura de los comandos en un script hace que el proceso se pueda repetir y automatizar.
+
+### Azure PowerShell está disponible para Windows, Linux y Mac,
+
+## *La CLI de Azure*
+
+### La CLI (interfaz de línea de comandos) de Azure es un programa ejecutable que permite a un desarrollador, profesional de DevOps o profesional de TI ejecutar comandos en Bash. Estos comandos llaman a la API REST de Azure para realizar todas las tareas de administración posibles en Azure. 
+
+### En muchos aspectos, la CLI de Azure es casi idéntica a Azure PowerShell con respecto a lo que se puede hacer con ella. Ambos funcionan con Windows, Linux y Mac
+
+## *Plantillas de ARM*
+
+### Aunque se puede escribir código imperativo en Azure PowerShell o en la CLI de Azure para configurar y anular un recurso de Azure u organizar una infraestructura completa que contenga decenas o cientos de recursos, hay una mejor forma de implementar esta funcionalidad.
+
+### Al usar las plantillas de Azure Resource Manager (ARM), puede describir los recursos que quiere usar en un formato JSON declarativo. La ventaja es que la plantilla de Resource Manager completa se comprueba antes de que se ejecute cualquier código para asegurarse de que los recursos se crearán y se conectarán correctamente.
+
+## *Análisis de los criterios de decisión*
+
+### En esta unidad, analizará los criterios que emplean los expertos como ayuda para decidir qué herramientas de administración de Azure usar para satisfacer sus necesidades empresariales. 
+
+## *¿Necesita realizar acciones de administración, gestión o creación de informes de forma puntual?*
+
+### Azure PowerShell y la CLI de Azure son herramientas de administración de Azure que le permiten obtener rápidamente la dirección IP de una máquina virtual (VM) que ha implementado, reiniciar una VM o escalar una aplicación. Es posible que quiera conservar los scripts personalizados de las dos herramientas en el disco duro local para determinados tipos de operaciones que tenga que realizar de forma reiterada.
+
+### Al contrario que la CLI de Azure y PowerShell, las plantillas de Azure Resource Manager (plantillas de ARM) definen los requisitos de infraestructura de la aplicación para implementaciones que se repiten. Aunque las plantillas de ARM no están pensadas para usarse de forma ocasional, es posible utilizarlas con esta finalidad. Pero en escenarios de un solo uso, es posible que prefiera herramientas más ágiles, como PowerShell, scripts de la CLI de Azure o Azure Portal.
+
+### Recuerde que las plantillas de ARM pueden incluir scripts de PowerShell o de la CLI de Azure, lo que le ofrecerá la posibilidad de usar scripts para tareas que puedan no ser posibles con la propia plantilla de ARM.
+
+## *¿Necesita una forma de configurar repetidamente uno o más recursos y asegurarse de que todas las dependencias se crean en el orden adecuado?*
+
+### Las plantillas de ARM definen los requisitos de infraestructura de la aplicación para una implementación repetible que se realiza de forma coherente. Un paso de validación garantiza que se puedan crear todos los recursos en el orden adecuado en función de las dependencias, en paralelo y de forma idempotente.
+
+## Al crear scripts, ¿procede de un entorno de administración de Windows o de Linux?
+
+### Si usted o los administradores de la nube provienen de un entorno de administración de Windows, es probable que prefieran usar PowerShell. Si usted o los administradores de la nube provienen de un entorno de administración de Linux, es probable que prefieran la CLI de Azure. En la práctica, se puede usar cualquiera de las herramientas para realizar la mayoría de las tareas de administración.
+
+## *Uso de Azure Portal para comprender y administrar visualmente su entorno en la nube*
+
+### Tailwind Traders usa extensamente Azure en toda la organización. Para asegurarse de que el equipo técnico y el equipo ejecutivo conozcan el gasto de la empresa en la nube, el director de operaciones en la nube se reúne semanalmente con el director financiero para hablar de ello.
+
+### Puede ser que las conversaciones empiecen por cuestiones superficiales, pero, a medida que avanza la reunión, pueden querer profundizar para obtener más información sobre cómo se usan los recursos de Azure. 
+
+## *¿Qué servicio debe elegir?*
+
+### Aplique los criterios de decisión que hemos aprendido en la unidad anterior para encontrar la opción adecuada.
+
+### En primer lugar, en este escenario, ¿Tailwind Traders tiene que realizar acciones puntuales de administración, gestión o creación de informes? Sí, y si tenemos en cuenta el requisito de poder consultar los datos visualmente y crear informes personalizados durante la reunión, Azure Portal es la mejor opción. Los asistentes a la reunión pueden encontrar rápidamente las respuestas usando una gran cantidad de opciones de creación de informes.
+
+### Los dos criterios de decisión siguientes no se aplican a este escenario, ya que el director de operaciones en la nube y el director financiero no implementarán ni configurarán ningún recurso.
+
+### Azure Portal es la opción de producto adecuada para este escenario.
+
+## *Uso de Azure PowerShell para tareas administrativas puntuales*
+
+### Tailwind Traders tiene como empleados a tecnólogos con diferentes aptitudes. Un equipo de desarrolladores y administradores se encarga de la compilación y el mantenimiento de una colección de aplicaciones para la intranet que son fundamentales para la empresa.
+
+### Han movido sus aplicaciones a la nube y ahora buscan una forma de realizar tareas administrativas, de gestión y de pruebas de forma puntual en el entorno de su intranet. Pronto se han dado cuenta de que administrar Azure desde el portal conlleva mucho tiempo y no es una tarea que se pueda repetir. ¿Qué herramienta debe usar la empresa para realizar tareas puntuales?
+
+## *¿Qué servicio debe elegir?*
+
+### En primer lugar, en este escenario, ¿el equipo de Tailwind Traders tiene que realizar tareas puntuales de administración, gestión o creación de informes? Sí. Sin embargo, el equipo ya sabe que no quiere basarse en Azure Portal para estas acciones puntuales. Por consiguiente, tanto Azure PowerShell como la CLI de Azure son opciones adecuadas. En un momento abordaremos qué herramienta debe usar el equipo.
+
+### En segundo lugar, en este escenario, ¿Tailwind Traders necesita un medio confiable y que se pueda repetir para implementar toda la infraestructura? No, no en este caso. Por lo tanto, las plantillas de Azure Resource Manager (plantillas de Resource Manager) no son la opción correcta.
+
+## *Uso de la CLI de Azure para tareas administrativas puntuales*
+
+### Como hemos visto en la unidad anterior, Tailwind Traders tiene como empleados a tecnólogos con diferentes aptitudes. El equipo de DevOps se ocupa principalmente de mantener en funcionamiento los sistemas externos, como el sitio de comercio electrónico de la empresa. Este equipo tiene conocimientos en administración de Linux. Con frecuencia, tiene que realizar tareas de administración relacionadas con el estado de su entorno de nube.
+
+## *¿Qué servicio debe elegir?*
+
+### La elección de la opción correcta en este escenario dependerá de los conocimientos del equipo. Dado que este equipo tiene conocimientos en administración de Linux, es probable que se sienta más cómodo con la CLI de Azure
+
+
+## *Uso de Azure Mobile App para administrar Azure desde cualquier lugar*
+
+### Tailwind Traders experimenta un aumento en el tráfico de comercio electrónico en momentos que coinciden con las festividades nacionales y los fines de semana. En los primeros años de la empresa, los administradores de sistemas críticos tenían que reunirse en la oficina del director de operaciones en la nube durante estos períodos importantes. Sin embargo, ahora que Tailwind Traders ha ejecutado correctamente la mayoría de los sistemas críticos, el director quiere relajar esta medida y permitir que los empleados pasen estas fechas con sus familias. ¿Hay algún producto que pueda ser útil para este escenario?
+
+## *¿Qué servicio debe elegir?*
+
+### Vamos a valorar de nuevo nuestros criterios para la toma de decisiones.
+
+### En primer lugar, ¿Tailwind Traders tiene que realizar acciones puntuales de administración, gestión o creación de informes? Sí. La pregunta es, ¿cómo? Los empleados pertinentes, cuando no se encuentran en la oficina, podrían usar un teléfono o tableta para estar pendientes del estado del entorno en la nube. Probablemente Azure Mobile App presente un equilibrio adecuado, ya que permite a los empleados estar lejos de la oficina y, a la vez, seguir realizando tareas puntuales de administración y gestión imprescindibles.
+
+## *Uso de plantillas de Resource Manager para implementar una infraestructura en la nube completa*
+
+### Tailwind Traders quiere poner en funcionamiento sus implementaciones en la nube. La empresa necesita una forma confiable y repetible para escalar sus operaciones durante los períodos de más ventas. Dado que va a elegir un proceso para escalar el entorno de producción, debe asegurarse de que el servicio elegido:
+
+* Sea eficaz y pueda crear muchos recursos en paralelo.
+
+* Cree todas las dependencias en el orden correcto.
+
+* Se pueda usar aunque se haya producido un error a medio aprovisionamiento de la infraestructura necesaria.
+
+## *¿Qué servicio debe elegir?*
+
+### En primer lugar, en este escenario, ¿Tailwind Traders tiene que realizar acciones puntuales de administración, gestión o creación de informes? En esta ocasión, no se busca realizar tareas puntuales u ocasionales de administración o gestión. Se necesita una tecnología para automatizar la implementación de toda la infraestructura cuando sea necesario.
+
+### En segundo lugar, ¿Tailwind Traders necesita un medio confiable y repetible para implementar toda la infraestructura? Sí, es exactamente eso lo que necesita la empresa. Nuestros criterios de decisión nos conducen a elegir las plantillas de Azure Resource Manager (plantillas de Resource Manager) para este escenario.
+
+### Podría usar Azure PowerShell o la CLI de Azure; sin embargo, estas tecnologías de scripting tienen limitaciones importantes en cuanto a la implementación de la infraestructura. En cambio, las plantillas de Resource Manager no están sujetas a estas limitaciones.
+
+## *Prueba de conocimientos*
+
+### 1. Como administrador, ¿debe recuperar la dirección IP de una VM determinada mediante Bash? ¿Cuál de las siguientes herramientas debería usar?
+
+### * La CLI de Azure* (La CLI de Azure le permite usar Bash para ejecutar tareas puntuales en Azure.
+)
+
+### 2. Usted es desarrollador y tiene que configurar su primera VM para hospedar un proceso que se ejecuta por la noche. ¿Cuál de las siguientes herramientas es la mejor opción?
+### *El portal de Azure (Azure Portal es un lugar excelente para que los principiantes obtengan información sobre Azure y configuren sus primeros recursos.
+)
+
+### 3. ¿Cuál es la mejor opción de infraestructura como código para configurar de forma rápida y fiable toda la infraestructura en la nube de forma declarativa?
+### *Plantillas de ARM* (Las plantillas de Resource Manager son la mejor opción de infraestructura como código para configurar de manera rápida y fiable toda la infraestructura en la nube de forma declarativa.
+)
+
+
+# **27.-Elección de la mejor tecnología sin servidor de Azure para su escenario empresarial**
 
 ### El término informática sin servidor se usa para describir un entorno de ejecución que se configura y administra de manera automática. El cliente tan solo debe escribir código o conectar y configurar los componentes en un editor visual y, después, especificar las acciones que desencadenan la funcionalidad, como un temporizador o una solicitud HTTP. Lo mejor de todo es que únicamente se paga en función del uso real del código y que no hay que preocuparse de las interrupciones, dado que el código puede hacer un escalado instantáneo para satisfacer la demanda.
 
