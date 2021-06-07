@@ -4378,7 +4378,7 @@ az network nsg rule list \
 ### 3. ¿Cuál es probablemente la mejor forma de que Tailwind Traders sepa a qué departamento de facturación pertenece cada recurso de Azure?
 ### Usar una etiqueta en cada recurso que incluya el departamento de facturación asociado (Las etiquetas proporcionan información extra, o metadatos, sobre los recursos. Así, el equipo podría crear una etiqueta llamada DeptFactur cuyo valor sería el nombre del departamento de facturación. Se puede usar Azure Policy para garantizar que se asignan las etiquetas adecuadas cuando se aprovisionen recursos.)
 
-# **Examine los estándares de privacidad, cumplimiento y protección de datos en Azure**
+# **31.- Examine los estándares de privacidad, cumplimiento y protección de datos en Azure**
 
 ## *Explorar los requisitos y las condiciones de cumplimiento*
 
@@ -4644,7 +4644,7 @@ az network nsg rule list \
 ### 3. ¿Dónde puede encontrar el departamento de TI los proyectos de referencia que se pueden aplicar directamente a las suscripciones de Azure?
 ### Documentación del cumplimiento de Azure (La documentación de cumplimiento proporciona proyectos de referencia, o definiciones de directivas, para estándares comunes que puede aplicar a su suscripción de Azure.)
 
-## *Planeación y administración de los costos de Azure*
+# **32.- Planeación y administración de los costos de Azure**
 
 ## *Comparación de costos mediante la calculadora de costo total de propiedad*
 
@@ -4826,8 +4826,6 @@ az network nsg rule list \
 
 ## *Comprar servicios de Azure*
 
-### En esta unidad, obtendrá información sobre cómo comprar servicios de Azure y se hará una idea de otros factores que afectan al costo.
-
 ### Tras reunirse con su director financiero y algunos de los responsables del equipo, Obtendrá información sobre algunos supuestos que ha pasado por alto. Ha podido actualizar rápidamente el gasto total estimado a través de la calculadora de costo total de propiedad (TCO).
 
 ### Durante la reunión, surgieron algunas preguntas nuevas a medida que la discusión apuntaba a la migración a la nube:
@@ -4956,6 +4954,275 @@ az network nsg rule list \
 ## *¿Cómo puedo calcular el costo total?*
 ### La Calculadora de precios muestra los productos de Azure por categorías. Agregue estas categorías a su estimación y configúrelas según sus requisitos específicos. Luego recibirá un precio estimado consolidado, con un desglose detallado de los costos asociados a cada recurso que ha agregado a la solución. Puede exportar o compartir esa estimación o guardarla para más adelante. Puede cargar una estimación guardada y modificarla para que coincida con los requisitos actualizados.
 ![calcular](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/plan-manage-azure-costs/media/4-pricing-calculator.png)
+
+### Las opciones que se pueden configurar en la Calculadora de precios varían entre productos, pero pueden incluir:
+* Región
+### Una región es la ubicación geográfica en la que se puede aprovisionar un servicio. Sudeste Asiático, Centro de Canadá, Oeste de EE. UU. y Norte de Europa son algunos ejemplos.
+
+* Nivel
+### Los niveles, como el nivel Gratis o el nivel Básico, tienen distintos niveles de disponibilidad o rendimiento y diferentes costos asociados.
+
+* Opciones de facturación
+### Las opciones de facturación resaltan las diferentes formas de pagar por un servicio. Las opciones pueden variar según el tipo de cliente y el tipo de suscripción, y pueden incluir opciones para ahorrar costos.
+
+* Opciones de soporte técnico
+### Estas opciones permiten seleccionar opciones de precios de soporte adicionales para determinados servicios.
+
+* Programas y ofertas
+### Es posible que el tipo de cliente o suscripción le permita elegir entre programas de licencia específicos u otras ofertas.
+
+
+* Precios de Desarrollo/pruebas de Azure
+### Esta opción muestra los precios disponibles para las cargas de trabajo de desarrollo y prueba. Los precios de Desarrollo/pruebas se aplican cuando se ejecutan recursos en una suscripción de Azure basada en una oferta de Desarrollo/pruebas.
+
+### Tenga en cuenta que la Calculadora de precios proporciona estimaciones y no cotizaciones de precios reales. Los precios reales pueden variar en función de la fecha de compra, la moneda de pago que use y el tipo de cliente de Azure en el que se encuentre.
+
+## **Ejercicio: Cálculo del costo de la carga de trabajo con la calculadora de precios**
+
+### En este ejercicio, usará la calculadora de precios para calcular el costo de ejecutar una aplicación web básica en Azure.
+### Teniendo en cuenta los factores de costo más importantes asociados a la ejecución en Azure, Tailwind Traders quiere tomar una carga de trabajo típica y calcular cuánto costará ejecutarla en Azure cada mes.
+
+### El administrador de TI de Tailwind Traders debe decidir si se va a reemplazar algún hardware local de antigüedad o si se va a migrar la aplicación a Azure. La empresa necesita saber cuál sería el costo mensual en curso de la solución en Azure.
+
+## *Definición de los requisitos*
+
+### En su centro de datos, el equipo tiene una aplicación web ASP.NET que se ejecuta en Windows. La aplicación web proporciona información sobre el inventario de productos y los precios. Hay dos máquinas virtuales que se conectan a través de un equilibrador de carga central. La aplicación web se conecta a una base de datos de SQL Server que contiene información de inventario y de precios.
+
+### El equipo decide:
+
+* Usar instancias de Azure Virtual Machines, de forma similar a las máquinas virtuales que se usan en el centro de datos.
+* Usar Azure Application Gateway para el equilibrio de carga.
+* Usar Azure SQL Database para almacenar información de inventario y de precios.
+
+### Configuracion básica
+![conf](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/plan-manage-azure-costs/media/5-estimate-costs-architecture.png)
+
+* Los empleados de Tailwind Traders usan la aplicación en sus tiendas minoristas. No es accesible para los clientes.
+* Esta aplicación no requiere una gran cantidad de potencia informática.
+* La máquinas virtuales y la base de datos se ejecutan de forma constante (730 horas por mes).
+* La red procesa aproximadamente 1 TB de datos al mes.
+* No es necesario configurar la base de datos para cargas de trabajo de alto rendimiento y no se requieren más de 32 GB de almacenamiento.
+
+## *Explorar la calculadora de precios*
+
+* 1. Vaya a la calculadora de precios.
+
+* 2. Observe las pestañas siguientes:
+![pesta](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/plan-manage-azure-costs/media/5-pricing-calculator-tabs.png)
+
+### **Productos**
+### Aquí es donde se eligen los servicios de Azure que desea incluir en su estimación. Probablemente pasará la mayor parte del tiempo aquí.
+### **Escenarios de ejemplo**
+### Aquí encontrará varias arquitecturas de referencia, o soluciones comunes basadas en la nube, que puede usar como punto de partida.
+### **Estimaciones guardadas**
+### Aquí encontrará las estimaciones que guardó anteriormente.
+### **P+F**
+### Aquí encontrará respuestas a las preguntas más frecuentes sobre la calculadora de precios.
+
+## *Calcular la solución*
+
+### Asegúrese de que la calculadora esté limpia, es decir, que no se muestre nada en la cotización. Puede restablecer la estimación seleccionando el icono de la papelera junto a cada elemento.
+
+## *Agregar servicios a la estimación*
+
+* 1. En la pestaña Productos, seleccione el servicio de cada una de estas categorías:
+
+|Category	|Servicio|
+|---------|--------|
+|Compute	|Máquinas virtuales|
+|Bases de datos	|Azure SQL Database|
+|Redes	|Application Gateway|
+
+* 2. Desplácese hasta la parte inferior de la página. Verá que cada servicio aparece con su configuración predeterminada.
+![estimacion](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/plan-manage-azure-costs/media/5-pricing-calculator-estimate.png)
+
+## *Configurar los servicios para que coincidan con los requisitos*
+
+* 1. En Virtual Machines, establezca estos valores:
+
+|Configuracion	|Value|
+|---------|--------|
+|Region|Oeste de EE. UU.|
+|Sistema operativo	|Windows|
+|Tipo	|(Solo sistema operativo)|
+|Nivel	|Estándar|
+|Instancia	|D2 v3|
+|Máquinas virtuales	|2 x 730 horas|
+
+* 2. En Azure SQL Database, establezca estos valores:
+|Configuración|Value|
+|------------|------|
+|Region	|Oeste de EE. UU.|
+|Tipo	|Base de datos única|
+|Capa de almacenamiento de copia de seguridad	|RA-GRS|
+|Modelo de compra	|vCore|
+|Nivel de servicio	|Uso general|
+|Nivel de proceso	|aprovisionado|
+|Generation	|Gen 5|
+|Instancia|8 núcleo virtual|
+
+### Deje las opciones restantes en sus valores actuales.
+
+* 3. En Application Gateway, establezca estos valores:
+
+|Configuración	|Value|
+|Region	|Oeste de EE. UU.|
+|Nivel	|Firewall de aplicaciones web|
+|Tamaño	|Mediano|
+|Horas de puerta de enlace|	2 x 730 horas|
+|Datos procesados	|1 TB|
+|Transferencia de datos de salida	|5 GB|
+
+### Deje las opciones restantes en sus valores actuales.
+
+## *Revisar, compartir y guardar la estimación*
+
+### En la parte inferior de la página, verá el costo total estimado de ejecutar la solución. Si lo desea, puede cambiar el tipo de moneda.
+
+![estimado](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/plan-manage-azure-costs/media/5-pricing-calculator-estimated-cost.png)
+
+### En este punto, tiene algunas opciones:
+
+* Seleccione Exportar para guardar la estimación como documento de Excel.
+
+* Seleccione Guardar o Guardar como para guardar la estimación en la pestaña Estimaciones guardadas para más adelante.
+
+* Seleccione Compartir para generar una dirección URL de modo que pueda compartir la estimación con su equipo.
+
+
+### Ahora tiene una estimación de costos que puede compartir con su equipo. Puede realizar ajustes a medida que detecta cualquier cambio en sus requisitos.
+
+## *Administrar y minimizar el costo total en Azure*
+
+### Como distribuidor de productos para la remodelación del hogar, el refrán "Mide dos veces antes de cortar" se ajusta al equipo en Tailwind Traders.
+
+### Estos son algunos procedimientos recomendados que pueden ayudarle a minimizar los costos.
+
+## *Comprender los costos estimados antes de implementar*
+
+### Para ayudarle a planear su solución en Azure, tenga en cuenta detenidamente los productos, servicios y recursos que necesita. Lea la documentación correspondiente para comprender cómo se mide y factura cada una de las opciones.
+
+### Calcule los costos previstos mediante la Calculadora de precios y la calculadora de costo total de propiedad (TCO). Agregue solo los productos, servicios y recursos que necesita para la solución.
+
+## *Usar Azure Advisor para supervisar la utilización*
+
+### Azure Advisor identifica los recursos no utilizados o infrautilizados, y recomienda recursos no utilizados que se pueden quitar. Esta información le ayudará a configurar los recursos para que coincidan con la carga de trabajo real.
+
+### En la imagen siguiente se muestran algunas recomendaciones de ejemplo de Azure Advisor:
+![recomendaciones](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/plan-manage-azure-costs/media/6-azure-advisor-expanded.png#lightbox)
+
+### Las recomendaciones se ordenan por impacto: alto, medio o bajo. 
+
+## *Usar límites de gasto para restringir los gastos*
+
+### Si tiene una evaluación gratuita o una suscripción de Azure basada en crédito, puede usar los límites de gasto para evitar la saturación accidental.
+
+### Por ejemplo, al gastar todo el crédito incluido en su cuenta gratuita de Azure, los recursos de Azure que implementó se quitan de la producción, y las máquinas virtuales (VM) de Azure se detienen y se desasignan. Los datos de las cuentas de almacenamiento están disponibles como de solo lectura. En este momento, puede actualizar su suscripción de evaluación gratuita a una suscripción de pago por uso.
+
+### Si tiene una suscripción basada en crédito y alcanza el límite de gasto configurado, Azure suspende su suscripción hasta que comience un nuevo período de facturación.
+
+### Un concepto relacionado es el de cuotas o límites en el número de recursos similares que se pueden aprovisionar dentro de la suscripción. Por ejemplo, puede asignar hasta 25 000 VM por región. Estos límites principalmente ayudan a Microsoft a planear la capacidad del centro de datos.
+
+## *Usar Reservas de Azure para pagar por adelantado*
+
+### Reservas de Azure ofrecen precios con descuento en determinados servicios de Azure. Reservas de Azure puede ahorrar hasta un 72 % en comparación con los precios de pago por uso. Para recibir un descuento, reserve los servicios y recursos abonándolos por adelantado.
+
+### En el ejemplo siguiente se muestra el ahorro estimado en las VM. En este ejemplo, se ahorra aproximadamente el 72 % con el compromiso de un período de tres años.
+![producto](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/plan-manage-azure-costs/media/6-azure-reservations.png)
+
+
+## *Elegir regiones y ubicaciones de bajo costo*
+### El costo de los productos, servicios y recursos de Azure puede variar entre ubicaciones y regiones. Si es posible, debe usarlos en aquellas ubicaciones y regiones donde el costo es menor.
+
+### Pero recuerde que algunos recursos se miden y se facturan según la cantidad de ancho de banda de red saliente (salida) que usan. Debe aprovisionar los recursos conectados que se midan por ancho de banda en la misma región de Azure para reducir el tráfico de salida entre ellos.
+
+## *Investigación de las ofertas de ahorro de costos disponibles*
+
+### Manténgase al día de las últimas ofertas de clientes y suscripciones de Azure, y cambie a las que le proporcionen el mayor ahorro de costos.
+
+## *Usar Azure Cost Management + Billing para controlar gastos*
+
+### Azure Cost Management + Billing es un servicio gratuito que le ayuda a comprender su factura de Azure, administrar su cuenta y sus suscripciones, supervisar y controlar los gastos de Azure, y optimizar el uso de recursos.
+### En la siguiente imagen se muestra el uso actual desglosado por servicio:
+![reporte](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/plan-manage-azure-costs/media/6-cost-management-expanded.png#lightbox)
+
+### Las características de Azure Cost Management + Billing incluyen:
+
+* Reporting
+
+### Use datos históricos para generar informes y predecir el uso y los gastos futuros.
+
+* Enriquecimiento de datos
+
+### Mejore la responsabilidad mediante la categorización de los recursos con etiquetas que se correspondan con las unidades organizativas y empresariales del mundo real.
+
+* Presupuestos
+
+### Cree y administre presupuestos de costos y uso mediante la supervisión de tendencias de demanda de recursos, tasas de consumo y patrones de costos.
+
+* Alertas
+
+### Obtenga alertas basadas en los presupuestos de costos y uso.
+
+* Recomendaciones
+
+### Reciba recomendaciones para eliminar recursos inactivos y para optimizar los recursos de Azure que aprovisiona.
+
+## *Aplicar etiquetas para identificar a los propietarios de costos*
+
+### Las etiquetas ayudan a administrar los costos asociados a los distintos grupos de productos y recursos de Azure. Puede aplicar etiquetas a grupos de recursos de Azure para organizar los datos de facturación.
+
+### Por ejemplo, si ejecuta varias VM para distintos equipos, puede usar etiquetas para clasificar los costos por departamento, como Recursos Humanos, Marketing o Finanzas, o por entorno, como de prueba o producción.
+
+### Las etiquetas facilitan la identificación de los grupos que generan los mayores costos de Azure, lo cual puede ayudarle a ajustar el gasto en consecuencia.
+
+### En la siguiente imagen se muestra el uso de un año desglosado por etiquetas en la página de Azure Cost Management + Billing:
+![cost](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/plan-manage-azure-costs/media/6-cost-management-tags.png)
+
+## *Cambiar el tamaño de las máquinas virtuales infrautilizadas*
+
+### Una recomendación común que encontrará de Azure Cost Management + Billing y Azure Advisor es cambiar el tamaño o apagar las VM que están infrautilizadas o inactivas.
+
+### Por ejemplo, supongamos que tiene una VM cuyo tamaño es Standard_D4_v4, un tipo de VM de uso general con cuatro vCPU y 16 GB de memoria. Tal vez descubra que esta VM está inactiva el 90 % del tiempo.
+
+### Los costos de las máquinas virtuales son lineales y dobles por cada tamaño mayor en la misma serie. Por lo tanto, en este caso, si reduce el tamaño de la VM de Standard_D4_v4 a Standard_D2_v4, que es el siguiente tamaño más bajo, reducirá el costo de proceso en un 50 %.
+
+![mv](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/plan-manage-azure-costs/media/6-vm-resize.png)
+
+## *Desasignar máquinas virtuales durante las horas de inactividad*
+
+### Recuerde que desasignar una máquina virtual significa que ya no se ejecuta la máquina virtual, sino que se conservan los discos duros y los datos asociados en Azure.
+### Si tiene cargas de trabajo de VM que solo se usan durante determinados períodos, pero las ejecuta cada hora de cada día, está malgastando dinero. Estas máquinas virtuales son magníficas candidatas para apagarse cuando no se usan y para volver a iniciarlas cuando las necesita, lo que ahorra costos de proceso mientras la máquina virtual está desasignada.
+
+### Este enfoque es una excelente estrategia para entornos de desarrollo y pruebas, donde las VM solo son necesarias durante el horario comercial. Azure proporciona incluso una manera de iniciar y detener automáticamente las máquinas virtuales según una programación.
+
+## *Eliminar recursos no utilizados*
+
+### Es posible que esta recomendación parezca obvia, pero, si no usa un recurso, debería apagarlo. No es poco frecuente encontrar sistemas de prueba de concepto, o que no son de producción, que después de completar un proyecto ya no son necesarios.
+
+### Revise el entorno con frecuencia y trabaje para identificar estos sistemas. Apagar estos sistemas puede tener un beneficio doble, al permitirle ahorrar en costos de infraestructura y suponer posibles ahorros en licencias y operaciones.
+
+## *Migración de servicios IaaS a PaaS*
+
+### Al trasladar las cargas de trabajo a la nube, una evolución natural es comenzar con los servicios de infraestructura como servicio (IaaS) porque se asignan de manera más directa a los conceptos y las operaciones con las que ya está familiarizado.
+
+### Con el tiempo, una manera de reducir costos es trasladar gradualmente las cargas de trabajo de IaaS para ejecutarlas en servicios de plataforma como servicio (PaaS). Aunque puede pensar en IaaS como acceso directo a la infraestructura de proceso, PaaS proporciona entornos de desarrollo e implementación listos para usar y que se administran automáticamente.
+
+### Por ejemplo, supongamos que ejecuta SQL Server en una VM que se ejecuta en Azure. Esta configuración le exige administrar el sistema operativo subyacente, configurar una licencia de SQL Server, administrar las actualizaciones de software y seguridad, etc. También deberá pagar por la máquina virtual tanto si la base de datos está procesando consultas como si no. Una manera de ahorrar costos es migrar la base de datos de SQL Server en una VM a Azure SQL Database. Azure SQL Database se basa en SQL Server.
+
+### No solo la ejecución de servicios de PaaS como Azure SQL Database suele ser menos costosa, pero dado que se administran automáticamente, no es necesario preocuparse por las actualizaciones de software, las revisiones de seguridad ni optimizar el almacenamiento físico para operaciones de lectura y escritura.
+
+## *Ahorro en costos de licencia*
+### Las licencias son otro aspecto que puede afectar considerablemente al gasto en la nube. Veamos algunas maneras de reducir los costos de licencia.
+
+## **Elección de sistemas operativos rentables**
+
+### Muchos servicios de Azure ofrecen una opción de ejecución en Windows o Linux. En algunos casos, el costo depende de su elección. Cuando se tiene elección y la aplicación no depende del sistema operativo subyacente, es útil comparar los precios para ver si se puede ahorrar dinero.
+
+## *Uso de la Ventaja híbrida de Azure para reasignar licencias de software en Azure*
+
+### Si ha adquirido licencias para Windows Server o SQL Server, y las licencias están cubiertas por Software Assurance, es posible que pueda reasignar esas licencias a VM de Azure.
+### Algunos de los detalles varían entre Windows Server y SQL Server. Proporcionaremos recursos al final de este módulo donde podrá obtener más información.
 
 ## *Prueba de conocimientos*
 
