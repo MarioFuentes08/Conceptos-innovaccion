@@ -5245,3 +5245,332 @@ az network nsg rule list \
 ### 4. Los pagos de los recursos de los entornos de desarrollo y pruebas los hacen los distintos departamentos. ¿Cuál es la mejor manera de categorizar los costos por departamento?
 ### Aplique una etiqueta a cada máquina virtual que identifique el departamento de facturación adecuado.( Puede aplicar etiquetas a grupos de recursos de Azure para organizar los datos de facturación.)
 
+# **33.-Elección de los servicios de Azure adecuados según los acuerdos de nivel de servicio y el ciclo de vida del servicio**
+
+## *¿Qué son los acuerdos de nivel de servicio (SLA)?*
+
+### Un acuerdo de nivel de servicio es un contrato formal entre una empresa de servicios y el cliente. En Azure, este acuerdo define los estándares de rendimiento que Microsoft se compromete a proporcionar al cliente.
+
+## *¿Por qué son importantes los acuerdos de nivel de servicio?*
+
+### La comprensión del acuerdo de nivel de servicio de los servicios de Azure que use le ayudará a conocer las garantías que puede esperar.
+
+### La disponibilidad de los servicios que usa afecta al tiempo de actividad y en el rendimiento de las aplicaciones que se compilan en Azure. Comprender los acuerdos de nivel de servicio implicados puede ayudarle a definir el acuerdo de nivel de servicio que establezca con sus clientes.
+
+## *¿Dónde puedo acceder a los acuerdos de nivel de servicio de los servicios de Azure?*
+### Puede acceder a los acuerdos de nivel de servicio desde Contratos de nivel de servicio.
+
+### No es necesaria una suscripción de Azure para revisar los acuerdos de nivel de servicio.
+
+### Cada servicio de Azure define su propio acuerdo de nivel de servicio. Los servicios de Azure están organizados por categoría.
+
+### Abra el acuerdo de nivel de servicio de Azure Database for MySQL, una base de datos administrada que facilita a los desarrolladores el trabajo con bases de datos MySQL. En breve volveremos a este acuerdo de nivel de servicio.
+
+* 1. Vaya a Contratos de nivel de servicio.
+* 2. En la categoría Bases de datos, seleccione Azure Database for MySQL.
+![azuredatabase](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/choose-azure-services-sla-lifecycle/media/2-sla-home-database-mysql.png)
+
+## *¿Qué incluye un acuerdo de nivel de servicio típico?*
+
+### Un acuerdo de nivel de servicio típico cuenta con estas secciones:
+
+* **Introducción**
+### En esta sección se explica qué esperar del acuerdo de nivel de servicio, por ejemplo, su ámbito y la repercusión que las renovaciones de suscripción pueden tener en las condiciones del acuerdo.
+
+* **Términos generales**
+### Esta sección contiene los términos empleados en todo el acuerdo de nivel de servicio, de modo que ambas partes (el cliente y Microsoft) entiendan y compartan el mismo vocabulario. Por ejemplo, en esta sección se puede definir el significado de tiempo de inactividad, incidentes y códigos de error.
+
+* **Detalles del Acuerdo de Nivel de Servicio**
+### En esta sección se definen las garantías específicas del servicio. Los compromisos de rendimiento se miden normalmente en porcentajes, que normalmente están comprendidos entre el 99,9 % ("tres nueves") y el 99,99 % ("cuatro nueves").
+
+### Por lo general, el compromiso de rendimiento principal se centra en el tiempo de actividad, es decir, en el porcentaje de tiempo que un producto o servicio está operativo y sin problemas. Algunos acuerdos de nivel de servicio se centran también en otros factores, como la latencia o la rapidez con la que el servicio debe responder a una solicitud.
+
+### Dedique un momento a leer el acuerdo de nivel de servicio de Azure Database for MySQL.
+
+### Verá que este acuerdo de nivel de servicio se centra en el tiempo de actividad. Azure Database for MySQL garantiza un tiempo de actividad del 99,99 % ("cuatro nueves"). Esto significa que se garantiza que el servicio se ejecutará y estará disponible para procesar las solicitudes el 99,99 % del tiempo.
+
+## *¿Qué relación hay entre los porcentajes y el tiempo de inactividad total?*
+
+## El tiempo de inactividad es el período de tiempo que el servicio no está disponible.
+
+### La diferencia entre el 99,9 % y el 99,99 % puede parecer pequeña, pero es importante comprender lo que significan estos números en cuanto al tiempo de inactividad total.
+
+### En esta tabla se ofrece una idea de cómo se reduce el tiempo de inactividad total a medida que el porcentaje del acuerdo de nivel de servicio aumenta del 99 % al 99,999 %:
+
+|Porcentaje de acuerdo de nivel de servicio|	Tiempo de inactividad por semana	|Tiempo de inactividad por mes|Tiempo de inactividad por año|
+|------------------------------------------|------------------------------------|------------------------------|---------------------------|
+|99|	1,68 horas	|7,2 horas	|3,65 días|
+|99,9|	10,1 minutos|	43,2 minutos|	8,76 horas|
+|99,95|	5 minutos|	21,6 minutos|	4,38 horas|
+|99,99|	1,01 minutos|	4,32 minutos|	52,56 minutos|
+|99,999|	6 segundos|	25,9 segundos|	5,26 minutos|
+
+### Estas cantidades son acumulativas, lo que significa que la duración de varios cortes de servicio diferentes se combina o se suma.
+
+## *¿Qué son los créditos de servicio?*
+
+### Un crédito de servicio es el porcentaje del precio que ha pagado que se le abonará conforme al proceso de aprobación de reclamaciones.
+### Un acuerdo de nivel de servicio describe la respuesta dada por Microsoft cuando un servicio de Azure no opera según su especificación. Por ejemplo, puede obtener un descuento compensatorio en su factura de Azure si un servicio no funciona conforme al acuerdo de nivel de servicio.
+
+### Por lo general, los créditos aumentan a medida que el tiempo de actividad se reduce. A continuación, se muestra cómo se aplican los créditos de Azure Database for MySQL según el tiempo de actividad:
+
+|Porcentaje de tiempo de actividad mensual|	Porcentaje de crédito de servicio|
+|-----------------------------------------|----------------------------------|
+|< 99,99	|10|
+|< 99	|25|
+|<95|100|
+## *¿Cuál es el acuerdo de nivel de servicio de los servicios gratuitos?*
+### Normalmente, los productos gratuitos no tienen un acuerdo de nivel de servicio.
+
+### Por ejemplo, muchos servicios de Azure proporcionan un nivel gratuito o compartido que ofrece una funcionalidad más limitada. Los servicios como Azure Advisor siempre son gratis. El acuerdo de nivel de servicio de Azure Advisor indica que, al ser gratuito, no tiene un acuerdo de nivel de servicio con respaldo financiero.
+
+## *¿Cómo se sabe saber cuándo se produce una interrupción en el servicio?*
+
+### Estado de Azure proporciona una visión global del estado de los servicios y las regiones de Azure. Si sospecha que hay una interrupción, suele ser un buen lugar para comenzar a investigar.
+### El estado de Azure proporciona una fuente RSS con los cambios de estado de los servicios de Azure a los que puede suscribirse. Esta fuente puede conectarse a software de comunicación como Microsoft Teams o Slack.
+### Desde la página estado de Azure también puede acceder a Azure Service Health, que proporciona una vista personalizada del estado de los servicios y las regiones de Azure que está usando, directamente desde Azure Portal.
+## *¿Cómo puedo solicitar un crédito de servicio a Microsoft?*
+
+### Normalmente, deberá presentar una reclamación a Microsoft para recibir un crédito de servicio. Si adquiere los servicios de Azure de un partner proveedor de soluciones en la nube (CSP), este suele encargarse de administrar el proceso de reclamación.
+
+### Cada acuerdo de nivel de servicio especifica el plazo en el que se debe enviar la reclamación y el plazo para que Microsoft la procese. En muchos servicios, la reclamación debe enviarse antes de que finalice el mes natural siguiente al mes en el que se produjo el incidente.
+
+## *Definición del acuerdo de nivel de servicio de la aplicación*
+
+### Un acuerdo de nivel de servicio de la aplicación define los requisitos del acuerdo para una aplicación específica. Este término normalmente hace referencia a una aplicación que el cliente compila en Azure.
+
+### Tailwind Traders ejecuta una aplicación basada en Azure denominada "Pedidos Especiales". La aplicación realiza un seguimiento de los pedidos especiales que los clientes han hecho en las tiendas físicas de la empresa. Un pedido especial incluye un artículo y todos los elementos personalizados que necesita el cliente. Por ejemplo, una puerta plegable podría incluir personalizaciones como la dimensión y la colocación de bisagras. Dado que las personalizaciones suelen requerir un tratamiento especial, el artículo personalizado debe pedirse al proveedor cuando lo necesita un cliente.
+
+### Hay muchas decisiones de diseño que se pueden tomar para mejorar la disponibilidad y la resistencia de las aplicaciones y los servicios que se crean en Azure. Estas decisiones quedan fuera del acuerdo de nivel de servicio para un servicio específico. En esta parte, se analizarán algunas de estas consideraciones.
+
+### Un buen punto de partida es debatir en equipo sobre la importancia que tiene para el negocio la disponibilidad de cada aplicación.
+
+## Impacto empresarial
+### Si la aplicación Pedidos Especiales se bloquea, ¿cómo repercutiría esto en la empresa? En este caso, los clientes no podrían realizar nuevos pedidos a través de la tienda y el personal no podría comprobar el estado de los pedidos existentes. Los clientes tendrán que intentarlo de nuevo más tarde o posiblemente acudirán a la competencia.
+
+## *Repercusión en otras operaciones empresariales*
+
+### La aplicación Pedidos Especiales no afecta a otras operaciones. Por lo tanto, la mayor parte del negocio de Tailwind Traders seguirá funcionando con normalidad, aunque la aplicación Pedidos Especiales deje de funcionar.
+
+## **Patrones de uso**
+### Los patrones de uso definen cuándo y cómo acceden los usuarios a la aplicación.
+### Una cuestión que debe tenerse en cuenta es si el requisito de disponibilidad difiere entre períodos de tiempo críticos y no críticos. Por ejemplo, una aplicación de declaración de impuestos no puede tener un error justo antes de una fecha límite de presentación.
+
+### En el caso de Tailwind Traders, las tiendas minoristas no están abiertas las 24 horas del día, por lo que, si la aplicación deja de funcionar durante la noche, el impacto será mínimo. No obstante, dado que Tailwind Traders tiene tiendas minoristas en todo el mundo, la empresa tendrá que asegurarse de que cada ubicación tenga acceso al servicio durante su horario comercial.
+
+## *¿Qué decide el equipo?*
+### Supongamos que Tailwind Traders decide que un acuerdo de nivel de servicio del 99,9 % es aceptable para la aplicación Pedidos Especiales. Esto le da a la empresa un tiempo de inactividad estimado de 10,1 minutos por semana. Pero ¿cómo se asegurará de que sus opciones de tecnología estén cubiertas por el acuerdo de nivel de servicio de la aplicación?
+
+### En la parte siguiente veremos cómo el equipo asocia los requisitos de la aplicación con servicios de Azure específicos. Conocerá algunas de las técnicas que puede usar para ayudar a garantizar que las opciones de tecnología cumplan con el acuerdo de nivel de servicio de la aplicación.
+
+## *Diseño de la aplicación para satisfacer el acuerdo de nivel de servicio*
+
+### Tailwind Traders decide que un acuerdo de nivel de servicio del 99,9 % es aceptable para la aplicación Pedidos Especiales. Recordemos que esto le da a la empresa un tiempo de inactividad estimado de 10,1 minutos por semana.
+
+### Ahora hay que diseñar una solución eficaz y confiable para esta aplicación en Azure, teniendo en cuenta el acuerdo de nivel de servicio de la aplicación. Habrá que seleccionar los productos y servicios de Azure y aprovisionar los recursos según esos requisitos.
+
+### Es inevitable que haya problemas. Pueden producirse errores de hardware. La red puede tener períodos intermitentes en los que se agote el tiempo de espera. Si bien es poco habitual que todo un servicio o toda una región experimenten interrupciones, es necesario establecer un plan para esos eventos.
+
+## **Identificación de las cargas de trabajo**
+### Una carga de trabajo es una función o tarea distinta que se separa lógicamente de otras tareas, en términos de requisitos de almacenamiento de datos y lógica empresarial. Cada carga de trabajo define un conjunto de requisitos para la disponibilidad, la escalabilidad, la coherencia de los datos y la recuperación ante desastres.
+### En Azure, la aplicación Pedidos Especiales necesitará:
+
+* Dos máquinas virtuales.
+* Una instancia de Azure SQL Database
+* Una instancia de Azure Load Balancer
+![diagrama](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/choose-azure-services-sla-lifecycle/media/4-special-orders-architecture.svg)
+
+## *Combinación de los acuerdos de nivel de servicio para calcular un SLA compuesto*
+
+### Después de haber identificado el acuerdo de nivel de servicio para las cargas de trabajo individuales de la aplicación Pedidos Especiales, es posible que observe que esos acuerdos de nivel de servicio no son iguales. ¿Cómo afecta esto a nuestro requisito general de acuerdo de nivel de servicio de la aplicación del 99,9 %? Para calcularlo, hay que realizar algunas operaciones matemáticas.
+
+### El proceso de combinación de acuerdos de nivel de servicio ayuda a calcular el acuerdo de nivel de servicio compuesto para un conjunto de servicios. Para calcular el acuerdo de nivel de servicio compuesto, hay que multiplicar el acuerdo de cada uno de los servicios.
+
+### Desde Contratos de nivel de servicio encontrará el acuerdo correspondiente a los servicios de Azure que necesite. Son las siguientes:
+|Servicios|Contrato de nivel de servicio|
+|---------|-----------------------------|
+|Azure Virtual Machines|99,9 por ciento|
+|Azure SQL Database	|99,99 por ciento|
+|Azure Load Balancer|99,99 por ciento|
+
+### Por tanto, el acuerdo de nivel de servicio compuesto para la aplicación Pedidos Especiales será:
+
+### 99.9% x 99.9% x 99.99% x 99.99%
+### = 0.999 x 0.999 x 0.9999 x 0.9999
+### = 0.9978 = 99.78%
+
+### Recuerde que necesita dos máquinas virtuales. Por lo tanto, el acuerdo de nivel de servicio de Virtual Machines del 99,9 % se incluye dos veces en la fórmula.
+
+### Tenga en cuenta que, aunque todos los servicios individuales tienen acuerdos de nivel de servicio que son iguales o mejores que el acuerdo de la aplicación, el hecho de combinarlos da como resultado un número total que es inferior al 99,9 % que necesita. ¿Por qué? Porque el uso de varios servicios agrega un nivel de complejidad adicional y aumenta ligeramente el riesgo de que se produzcan errores.
+
+### Aquí puede ver que el acuerdo de nivel de servicio compuesto del 99,78 % no cumple el acuerdo de nivel de servicio requerido del 99,9 %. Podría consultar con el equipo si esto es aceptable. También podría implementar otras estrategias en el diseño para mejorar este acuerdo de nivel de servicio.
+
+## * ¿Qué ocurre cuando el acuerdo de nivel de servicio compuesto no satisface sus necesidades?*
+
+### En el caso de la aplicación Special Orders, el contrato de nivel de servicio compuesto no cumple el acuerdo requerido del 99,9 %. Echemos un vistazo a algunas estrategias que Tailwind Traders puede considerar.
+
+## *Elección de las opciones de personalización que se ajustan al acuerdo de nivel de servicio requerido*
+
+### Cada una de las cargas de trabajo definidas anteriormente tiene su propio acuerdo de nivel de servicio, y las opciones de personalización que se toman al aprovisionar cada carga de trabajo afectan a ese acuerdo. Por ejemplo:
+
+* Discos
+### Con Virtual Machines, puede elegir entre un disco administrado HDD estándar, un disco administrado SSD estándar, un disco SSD Premium o Disco Ultra. El acuerdo de nivel de servicio para una sola VM sería del 95 %, 99,5 % o 99,9 %, dependiendo de la opción de disco.
+* Niveles
+### Algunos servicios de Azure se ofrecen como producto de nivel gratuito y como servicio de pago estándar. Por ejemplo, Azure Automation proporciona 500 minutos de tiempo de ejecución de trabajos en una cuenta gratuita de Azure, pero no está respaldado por un acuerdo de nivel de servicio. El acuerdo de nivel de servicio estándar para Azure Automation es del 99,9 %.
+
+### Asegúrese de que las decisiones de compra tienen en cuenta la repercusión en el acuerdo de nivel de servicio de los servicios de Azure que elija. Esto garantiza que el acuerdo de nivel de servicio sea compatible con el acuerdo de nivel de servicio necesario para su aplicación.
+
+### En este caso, Tailwind Traders podría elegir la opción Disco Ultra para sus máquinas virtuales para ayudar a garantizar un mayor tiempo de actividad.
+
+## *Creación de requisitos de disponibilidad en el diseño*
+
+### En el diseño de aplicaciones se pueden considerar factores relacionados con la infraestructura de la nube subyacente.
+
+### Por ejemplo, para mejorar la disponibilidad de la aplicación, evite tener únicos puntos de error. Por lo tanto, en lugar de agregar más máquinas virtuales, se pueden implementar una o más instancias adicionales de la misma máquina virtual en las diferentes zonas de disponibilidad de una misma región de Azure.
+
+### Una zona de disponibilidad es una ubicación física única dentro de una región de Azure. Cada zona de disponibilidad consta de uno o varios centros de datos equipados con alimentación, refrigeración y redes independientes. Estas zonas usan programaciones diferentes para el mantenimiento, por lo que, si una zona se ve afectada, la instancia de máquina virtual de la otra zona no se ve afectada.
+
+### La implementación de dos o más instancias de una máquina virtual de Azure en dos o más zonas de disponibilidad eleva el acuerdo de nivel de servicio de la máquina virtual al 99,99 %. Al volver a calcular el acuerdo de nivel de servicio compuesto anterior con este acuerdo de nivel de servicio de Virtual Machines, se obtiene el siguiente acuerdo:
+
+### 99.99% x 99.99% x 99.99% x 99.99% x = 99.96 %
+
+### Este acuerdo de nivel de servicio revisado del 99,96 % supera el objetivo del 99,9 %.
+
+## *Inclusión de redundancia para aumentar la disponibilidad*
+
+### Para garantizar la alta disponibilidad, se puede planear que la aplicación tenga componentes duplicados en varias regiones, lo que se conoce como redundancia. Por otro lado, para minimizar los costos durante períodos no críticos, se puede ejecutar la aplicación únicamente en una región. Tailwind Traders podría tener esto en cuenta si las tarifas de pedidos especiales tienden a ser mucho mayores durante determinados meses o estaciones.
+
+### Para lograr la máxima disponibilidad en la aplicación, agregue redundancia a cada parte de la aplicación. Esta redundancia incluye la propia aplicación, así como los servicios y la infraestructura subyacentes. Sin embargo, tenga en cuenta que esto puede ser difícil y caro, y a menudo da como resultado soluciones más complejas de lo necesario.
+
+## *Un rendimiento muy alto es difícil de lograr*
+
+### Los objetivos de rendimiento por encima del 99,99 % son muy difíciles de lograr. Un acuerdo de nivel de servicio del 99,99 % equivale a 1 minuto de tiempo de inactividad por semana. Es difícil responder a errores con la rapidez suficiente para satisfacer los objetivos de rendimiento de acuerdos de nivel de servicio que superen el 99,99 %. En su lugar, si se produce una interrupción, la aplicación debe ser capaz de realizar un diagnóstico y una reparación de manera automática.
+
+## *Acceso a la versión preliminar de servicios y características*
+
+### Ahora que las aplicaciones de Tailwind Traders ya están en funcionamiento, la empresa quiere empezar a buscar nuevas funcionalidades. Una opción consiste en consultar los servicios en versión preliminar. En esta parte, obtendrá información sobre la transición entre las fases de versión preliminar y disponibilidad general de los servicios de Azure.
+
+### En el caso de Tailwind Traders, la migración desde el centro de datos a Azure tiene más que ver con la eficacia operativa. El equipo de investigación y desarrollo está examinando nuevas características basadas en la nube que les darán ventaja sobre sus competidores.
+
+### Tailwind Traders está experimentando con un sistema de entrega mediante drones para los clientes que se encuentran en zonas rurales. La empresa necesita que el sistema de orientación de los drones sea capaz de hacer un seguimiento en tiempo real de las tormentas, pero la característica aún no está lista. Hay un nuevo servicio Analizador de tormentas por IA que acaba de entrar en la fase de versión preliminar pública. Por lo tanto, Tailwind Traders ha decidido incorporarlo en las primeras fases de prueba de la aplicación.
+
+### **Nota:** Analizador de tormentas por IA es un servicio ficticio de Azure, que se presentó aquí únicamente con fines ilustrativos.
+
+### Antes de que el equipo siga avanzando, quiere tener claro cómo van a afectar los servicios de versión preliminar a su acuerdo de nivel de servicio. Comencemos por definir el ciclo de vida de los servicios de Azure.
+
+## *¿Qué es el ciclo de vida de un servicio?*
+
+### El ciclo de vida de un servicio define la forma en que cada servicio de Azure se pone a disposición del público.
+
+### Cada servicio de Azure empieza con fase de desarrollo. En esta fase, el equipo de Azure recopila y define los requisitos y comienza a crear el servicio.
+
+### A continuación, el servicio pasa a la fase de versión preliminar pública. Durante esta fase, el público puede acceder al servicio y experimentar con él de modo que pueda proporcionar comentarios. Los comentarios ayudan a Microsoft a mejorar los servicios. Lo que es más importante, proporcionar comentarios le ofrece la oportunidad de solicitar funcionalidades nuevas o diferentes para que los servicios se adapten mejor a sus necesidades.
+
+### Una vez que se valida y se prueba un servicio de Azure nuevo, se pone a disposición de todos los clientes como servicio listo para la producción. Esto se conoce como disponibilidad general (GA).
+
+## *¿Qué términos y condiciones se pueden esperar?*
+
+### Cada versión preliminar de Azure define sus propios términos y condiciones. Todos los términos y condiciones específicos de la versión preliminar complementan el acuerdo de servicio de Azure existente.
+### Algunas versiones preliminares no están cubiertas por el servicio de soporte al cliente. Por lo tanto, no se recomienda usar esas versiones preliminares para cargas de trabajo críticas para la empresa.
+
+## *¿Cómo se puede acceder a los servicios de versión preliminar?*
+
+### Se puede acceder a ellos desde Azure Portal.
+
+### Siga estos pasos para ver qué servicios están disponibles en versión preliminar. Puede seguir adelante si tiene una suscripción a Azure.
+
+* 1. Abra Azure Portal e inicie sesión.
+* 2. Seleccione Crear un recurso.
+* 3. Escriba versión preliminar en el cuadro de búsqueda y seleccione ENTRAR.
+* 4. Seleccione un servicio para obtener más información sobre él. También puede iniciar el servicio si desea probarlo.
+
+## *¿Cómo se puede acceder a las nuevas características de un servicio existente?*
+
+### Algunas características en versión preliminar están relacionadas con un área específica de un servicio de Azure existente. Por ejemplo, un servicio de cálculo o de base de datos que use diariamente podría proporcionar una funcionalidad mejorada. Estas características en versión preliminar están disponibles al implementar, configurar y administrar el servicio.
+
+### Aunque una característica en versión preliminar de Azure puede usarse en producción, es muy importante conocer las limitaciones de uso antes implementarla en producción.
+
+## *¿Cómo se puede acceder a las características en versión preliminar para Azure Portal?*
+
+### Puede acceder a las características en versión preliminar que son específicas de Azure Portal en Microsoft Azure (versión preliminar).
+
+### Las características en versión preliminar típicas del portal proporcionan mejoras de rendimiento, navegación y accesibilidad a la interfaz de Azure Portal.
+
+### Verá Microsoft Azure (versión preliminar) cerca de la barra de menús para recordarle que está trabajando con una versión preliminar de Azure Portal.
+
+![Azure version](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/choose-azure-services-sla-lifecycle/media/5-azure-portal-preview.png)
+
+## *¿Cómo puedo proporcionar comentarios en Azure Portal?*
+
+### Se pueden proporcionar en varios sitios:
+
+* La pestaña Comentarios de Azure Portal.
+
+![comentarios](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/choose-azure-services-sla-lifecycle/media/5-azure-portal-feedback.png)
+
+## *¿Cómo puedo mantenerme informado de las últimas novedades?*
+
+### La página Actualizaciones de Azure ofrece información sobre las últimas actualizaciones de productos, servicios y características de Azure, así como hojas de ruta y anuncios de productos.
+
+### En la página actualizaciones de Azure, puede:
+
+* ver los detalles de todas las actualizaciones de Azure;
+
+* ver qué actualizaciones son de disponibilidad general, versión preliminar o desarrollo;
+
+![dispo](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/choose-azure-services-sla-lifecycle/media/5-azure-updates-filter.png)
+
+* examinar actualizaciones por categoría de producto o tipo de actualización;
+
+* buscar actualizaciones por palabra clave;
+
+* suscribirse a una fuente RSS para recibir notificaciones;
+
+* Acceso a la página de Microsoft Connect para leer anuncios y noticias de productos de Azure.
+
+## *Prueba de conocimientos*
+
+### Considere el siguiente escenario: Luego, elija la mejor respuesta para cada pregunta y seleccione Comprobar las respuestas.
+
+### Recuerde que la aplicación Pedidos Especiales de Tailwind Traders incluye dos máquinas virtuales, Azure Load Balancer y Azure SQL Database:
+
+![app](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/choose-azure-services-sla-lifecycle/media/4-special-orders-architecture.svg)
+
+### Este es el acuerdo de nivel de servicio de cada servicio:
+
+|Servicio|Contrato de nivel de servicio|
+|--------|-----------------------------|
+|Azure Virtual Machines	|99,9 por ciento|
+|Azure SQL Database	|99,99 por ciento|
+|Azure Load Balancer	|99,99 por ciento|
+
+### Para calcular el acuerdo de nivel de servicio compuesto de un conjunto de servicios, multiplique el acuerdo de nivel de servicio de cada uno de los servicios. Recuerde que el acuerdo de nivel de servicio compuesto existente es:
+
+### 99.9% x 99.9% x 99.9% x 99.99% = 99.78%
+
+### El equipo quiere agregar una característica de cartografía que permita calcular las rutas entre los proveedores cercanos y las tiendas. Para ello, el equipo utilizará Azure Maps.
+
+### Además, el equipo necesita más capacidad de procesamiento para mantener el ritmo de la demanda. Para ello, agregará una tercera máquina virtual al grupo.
+
+![app especial](https://docs.microsoft.com/es-mx/learn/azure-fundamentals/choose-azure-services-sla-lifecycle/media/6-special-orders-architecture-maps.svg)
+
+### Recuerde que puede acceder a los acuerdos de nivel de servicio desde la página Contratos de nivel de servicio.
+
+### Tailwind Traders también está pensando en usar un servicio de realidad aumentada en la aplicación Pedidos Especiales para ayudar a los clientes a visualizar sus personalizaciones. Este servicio de Azure se encuentra actualmente en la fase de versión preliminar pública.
+
+## *Comprobación de conocimientos*
+
+### 1. ¿Cuál es el acuerdo de nivel de servicio de Azure Maps en términos de tiempo de actividad garantizado?
+### *99,9 por ciento*
+
+### 2. ¿Cuál es el nuevo acuerdo de nivel de servicio compuesto? Recuerde que el nuevo acuerdo de nivel de servicio incluye una tercera máquina virtual y Azure Maps.
+### 99.99%x99.9%x 99.9%x 99.9%x 99.99%x99.9%
+### =*99,58 por ciento*
+
+### 3. La adición de una tercera máquina virtual reduce el acuerdo de nivel de servicio compuesto. ¿Qué puede hacer Tailwind Traders para compensar esta reducción?
+### Implementar instancias adicionales de las mismas máquinas virtuales en diferentes zonas de disponibilidad de la misma región de Azure.
+### (Correcto. Si una zona de disponibilidad se ve afectada, la instancia de la máquina virtual de la otra zona de disponibilidad no se verá afectada.)
+
+### 4. ¿Qué enfoque debería adoptar la empresa para agregar el servicio en versión preliminar de realidad aumentada (AR) a su arquitectura?
+### El equipo de desarrollo puede crear una versión prototipo de la aplicación que incluya el servicio AR, y someterla a prueba con algunos empleados de las tiendas minoristas.
+### (Correcto. Cuando el servicio AR alcance la versión de disponibilidad general (GA), el equipo podrá implementarlo en producción.) 
